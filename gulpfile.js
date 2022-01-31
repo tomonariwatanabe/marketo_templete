@@ -10,7 +10,13 @@ gulp.task('default', function (done) {
             $$('meta').each(function () {
                 var meta = $$(this);
                 var variable = new RegExp('\\$\\{' + meta.attr('id') + '\\}', 'g');
-                html = html.replace(variable, meta.attr('default'));
+                var value = "";
+                if (meta.attr('units')) {
+                    value = meta.attr('default') + meta.attr('units')
+                } else {
+                    value = meta.attr('default')
+                };
+                html = html.replace(variable, value);
             });
             file.contents = Buffer.from(html);
             done(null, file);
