@@ -1,0 +1,1206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title></title>
+
+<head>
+    <!-- ____________________________Other Meta Tag ________________________-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
+    <link rel=”stylesheet” href="https://fonts.googleapis.com/css?family=Noto+Sans+JP">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <!--[if !mso]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<![endif]-->
+
+    <!--___________________ Marketo Variable Definitions ___________________-->
+    <meta class="mktoColor" id="GlobalExternalBackgroundColor" mktoname="600pxを超えた時の背景色" default="#f2f2f2" mktomodulescope="false" />
+    <meta class="mktoColor" id="BackgroundColor" mktoname="背景色" default="#ffffff" mktomodulescope="true" />
+    <meta class="mktoNumber" id="GlobalWidth" mktoname="メールの横幅" default="600" min="1" max="1000" units="px" step="1" mktomodulescope="false" />
+    <meta class="mktoList" id="mkto-masthead-alignment" mktoname="Masthead Alignment" values="left,center,right" mktomodulescope="true" default="left" />
+    <meta class="mktoList" id="mkto-masthead-alignment-center" mktoname="Masthead Alignment center" values="left,center,right" mktomodulescope="true" default="center" />
+
+    <!--画像-->
+    <meta class="mktoNumber" id="ImgNoLink__width" mktoname="横幅" default="100" min="1" max="300" units="%" step="1" mktomodulescope="true" />
+
+    <!--空白１-->
+    <meta class="mktoColor" id="spacerBackgroundColor" mktoname="背景色" default="#ffffff" mktomodulescope="true" />
+    <meta class="mktoNumber" id="spacerSpacer" mktoname="高さ" default="40" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+
+    <!--タイトル太字-->
+    <meta class="mktoNumber" id="TextTitle_bold__FontWeight" mktoname="文字の太さ" default="900" min="100" max="900" step="100" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextTitle_bold__FontSize" mktoname="フォントサイズ" default="22" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_bold__FontColor" mktoname="文字色" default="#111111" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_bold__BackgroundColor" mktoname="背景色" default="#ffffff" mktomodulescope="true" />
+
+    <!--メインテキスト-->
+    <meta class="mktoNumber" id="TextSentence__FontSize" mktoname="フォントサイズ" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextSentence__FontColor" mktoname="文字色" default="#111111" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextSentence__BackgroundColor" mktoname="背景色" default="#ffffff" mktomodulescope="true" />
+
+    <!-- タイトル|左赤 -->
+    <meta class="mktoNumber" id="TextTitle_LBoderRed__FontSize" mktoname="フォントサイズ" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_LBoderRed__FontColor" mktoname="文字色" default="#111111" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_LBoderRed__BackgroundColor" mktoname="背景色" default="#ffffff" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_LBoderRed__BorderLeftColor" mktoname="左線の色" default="#ff0000" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextTitle_LBoderRed__BorderLeftWeight" mktoname="左線の太さ" default="3" min="1" max="300" units="px" step="1" 　mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextTitle_LBoderRed__FontWeight" mktoname="文字の太さ" default="900" min="100" max="900" step="100" mktomodulescope="true" />
+    <meta class="mktoString" id="TextTitle_LBoderRed__Text" mktoname="文言" default="住みやすい駅をピックアップ" mktomodulescope="true" />
+
+    <!-- タイトル|上下金 -->
+    <meta class="mktoNumber" id="TextTitle_TBBoderGold__FontSize" mktoname="フォントサイズ" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_TBBoderGold__FontColor" mktoname="文字色" default="#111111" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_TBBoderGold__BackgroundColor" mktoname="背景色" default="#ffffff" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_TBBoderGold__BorderColor" mktoname="線の色" default="#BA8E12" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextTitle_TBBoderGold__BorderWeight" mktoname="左線の太さ" default="1" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextTitle_TBBoderGold__FontWeight" mktoname="文字の太さ" default="600" min="100" max="900" step="100" mktomodulescope="true" />
+    <meta class="mktoString" id="TextTitle_TBBoderGold__Text" mktoname="文言" default="タイトル" mktomodulescope="true" />
+
+    <!-- \見出し/ -->
+    <meta class="mktoNumber" id="TextTitle_Slash__FontSize" mktoname="フォントサイズ" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_Slash__FontColor" mktoname="文字色" default="#111111" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextTitle_Slash__FontWeight" mktoname="文字の太さ" default="900" min="100" max="900" step="100" mktomodulescope="true" />
+    <meta class="mktoString" id="TextTitle_Slash__Text" mktoname="文言" default="見出し" mktomodulescope="true" />
+
+    <!-- タイトル|上下金 -->
+    <meta class="mktoNumber" id="TextTitle_UBoderGold__FontSize" mktoname="フォントサイズ" default="20" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_UBoderGold__FontColor" mktoname="文字色" default="#111111" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_UBoderGold__BorderColor" mktoname="線の色" default="#BA8E12" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextTitle_UBoderGold__BorderWeight" mktoname="左線の太さ" default="7" min="1" max="300" units="px" step="1" 　mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextTitle_UBoderGold__FontWeight" mktoname="文字の太さ" default="900" min="100" max="900" step="100" mktomodulescope="true" />
+    <meta class="mktoString" id="TextTitle_UBoderGold__Text" mktoname="文言" default="タイトル" mktomodulescope="true" />
+
+    <!--駅関連-->
+    <meta class="mktoColor" id="GlobalBorderColor" mktoname="枠の色" default="#111111" mktomodulescope="true" />
+    <meta class="mktoNumber" id="GlobalBorderWeight" mktoname="枠の太さ" default="3" min="1" max="100" step="1" units="px" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextEkiName__FontSize" mktoname="フォントサイズ" default="24" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextEkiName__FontColor" mktoname="文字色" default="#111111" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextEkiNameKana__FontSize" mktoname="フォントサイズ" default="16" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextEkiNameKana__FontColor" mktoname="文字色" default="#111111" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextEkiNameEn__FontSize" mktoname="フォントサイズ" default="13" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextEkiNameEn__FontColor" mktoname="文字色" default="#ffffff" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextEkiNameEn__BackgroundColor" mktoname="背景色" default="#2288cc" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextEkiSentence__FontSize" mktoname="フォントサイズ" default="14" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextEkiSentence__FontColor" mktoname="文字色" default="#111111" mktomodulescope="true" />
+    <meta class="mktoString" id="TextEkiName__Text" mktoname="文言" default="流山おおたかの森" mktomodulescope="true" />
+    <meta class="mktoString" id="TextEkiNameKana__Text" mktoname="文言" default="ながれやまおおたかのもり" mktomodulescope="true" />
+    <meta class="mktoString" id="TextEkiNameEn__Text" mktoname="文言" default="Nagareyama-otakanomori" mktomodulescope="true" />
+
+    <!-- 画像２つサムネイル -->
+    <meta class="mktoNumber" id="twoThumbnail__FontSize" mktoname="フォントサイズ" default="10" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="twoThumbnail_Case__FontColor" mktoname="文字色" default="#555555" mktomodulescope="true" />
+    <meta class="mktoNumber" id="twoThumbnail_Case__Weight" mktoname="枠の太さ" default="3" min="1" max="900" step="1" units="px" mktomodulescope="true" />
+    <meta class="mktoColor" id="twoThumbnail_Title__FontColor" mktoname="文字色" default="#555555" mktomodulescope="true" />
+    <meta class="mktoNumber" id="twoThumbnail_Title__Weight" mktoname="枠の太さ" default="3" min="1" max="500" step="1" units="px" mktomodulescope="true" />
+    <meta class="mktoColor" id="twoThumbnail_Info__FontColor" mktoname="文字色" default="#686868" mktomodulescope="true" />
+    <meta class="mktoNumber" id="twoThumbnail_Info__Weight" mktoname="枠の太さ" default="3" min="1" max="900" step="1" units="px" mktomodulescope="true" />
+    <meta class="mktoNumber" id="twoThumbnail_anker__FontSize" mktoname="フォントサイズ" default="10" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="twoThumbnail_anker__FontColor" mktoname="文字色" default="#ffffff" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextEkiNameEn__BackgroundColor" mktoname="背景色" default="#ff0000" mktomodulescope="true" />
+
+    <!-- ２つ横並びボタン -->
+    <meta class="mktoNumber" id="RowCTAButton__Weight" mktoname="枠の太さ" default="3" min="1" max="900" step="1" units="px" mktomodulescope="true" />
+    <meta class="mktoNumber" id="RowCTAButton__FontSize" mktoname="フォントサイズ" default="12" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="RowCTAButton__Width" mktoname="ボタンサイズ" default="100" min="1" max="100" units="%" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="RowCTAButton__Height" mktoname="ボタン高さ" default="50" min="1" max="100" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="RowCTAButton_first__FontColor" mktoname="文字色（左）" default="#ffffff" mktomodulescope="true" />
+    <meta class="mktoColor" id="RowCTAButton_first__BackgroundColor" mktoname="背景色（左）" default="#B200FD" mktomodulescope="true" />
+    <meta class="mktoString" id="RowCTAButton_first__Text" mktoname="ボタンの文言（左）" default="CliCK" mktomodulescope="true" />
+    <meta class="mktoString" id="RowCTAButton_first__Link" mktoname="ボタンのリンク（左）" default="https://oh.openhouse-group.com/" mktomodulescope="true" />
+    <meta class="mktoColor" id="RowCTAButton_second__FontColor" mktoname="文字色（右）" default="#ffffff" mktomodulescope="true" />
+    <meta class="mktoColor" id="RowCTAButton_second__BackgroundColor" mktoname="背景色（右）" default="#B200FD" mktomodulescope="true" />
+    <meta class="mktoString" id="RowCTAButton_second__Text" mktoname="ボタンの文言（右）" default="CliCK" mktomodulescope="true" />
+    <meta class="mktoString" id="RowCTAButton_second__Link" mktoname="ボタンのリンク（右）" default="https://oh.openhouse-group.com/" mktomodulescope="true" />
+
+    <!-- START カスタムボタンCTA-->
+    <meta class="mktoNumber" id="CTAWCustome__Weight" mktoname="枠の太さ" default="3" min="1" max="900" step="1" units="px" mktomodulescope="true" />
+    <meta class="mktoNumber" id="CTAWCustome__FontSize" mktoname="フォントサイズ" default="18" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="CTAWCustome__Width" mktoname="ボタンサイズ" default="70" min="1" max="100" units="%" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="CTAWCustome__Height" mktoname="ボタン高さ" default="50" min="1" max="100" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="CTAWCustome__FontColor" mktoname="文字色（左）" default="#ffffff" mktomodulescope="true" />
+    <meta class="mktoColor" id="CTAWCustome__BackgroundColor" mktoname="背景色" default="#B200FD" mktomodulescope="true" />
+    <meta class="mktoString" id="CTAWCustome__Text" mktoname="ボタンの文言" default="Get Accessible Now" mktomodulescope="true" />
+    <meta class="mktoString" id="CTAWCustome__Link" mktoname="ボタンのリンク" default="https://oh.openhouse-group.com/" mktomodulescope="true" />
+
+    <!-- START カスタムボタンCTA_WHITE-->
+    <meta class="mktoNumber" id="CTAWCustome_WHITE__Weight" mktoname="枠の太さ" default="3" min="1" max="900" step="1" units="px" mktomodulescope="true" />
+    <meta class="mktoNumber" id="CTAWCustome_WHITE__FontSize" mktoname="フォントサイズ" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="CTAWCustome_WHITE__Width" mktoname="ボタンサイズ" default="70" min="1" max="100" units="%" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="CTAWCustome_WHITE__Height" mktoname="ボタン高さ" default="50" min="1" max="100" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="CTAWCustome_WHITE__FontColor" mktoname="文字色（左）" default="#111111" mktomodulescope="true" />
+    <meta class="mktoString" id="CTAWCustome_WHITE__Text" mktoname="ボタンの文言" default="Get Accessible Now" mktomodulescope="true" />
+    <meta class="mktoString" id="CTAWCustome_WHITE__Link" mktoname="ボタンのリンク" default="https://oh.openhouse-group.com/" mktomodulescope="true" />
+
+    <!-- START カスタムボタンCTA_RED-->
+    <meta class="mktoNumber" id="CTAWCustome_RED__Weight" mktoname="枠の太さ" default="3" min="1" max="900" step="1" units="px" mktomodulescope="true" />
+    <meta class="mktoNumber" id="CTAWCustome_RED__FontSize" mktoname="フォントサイズ" default="15" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="CTAWCustome_RED__Width" mktoname="ボタンサイズ" default="70" min="1" max="100" units="%" step="1" mktomodulescope="true" />
+    <meta class="mktoNumber" id="CTAWCustome_RED__Height" mktoname="ボタン高さ" default="50" min="1" max="100" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="CTAWCustome_RED__FontColor" mktoname="文字色" default="#ffffff" mktomodulescope="true" />
+    <meta class="mktoString" id="CTAWCustome_RED__Text" mktoname="ボタンの文言" default="Get Accessible Now" mktomodulescope="true" />
+    <meta class="mktoString" id="CTAWCustome_RED__Link" mktoname="ボタンのリンク" default="https://oh.openhouse-group.com/" mktomodulescope="true" />
+
+    <!-- CTA（下線）-->
+    <meta class="mktoNumber" id="TextTitle_bBorder__Weight" mktoname="枠の太さ" default="3" min="1" max="900" step="1" units="px" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextTitle_bBorder__FontSize" mktoname="フォントサイズ" default="16" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_bBorder__FontColor" mktoname="文字色" default="#ffffff" mktomodulescope="true" />
+    <meta class="mktoString" id="TextTitle_bBorder__Text" mktoname="ボタンの文言" default="Get Accessible Now" mktomodulescope="true" />
+    <meta class="mktoColor" id="TextTitle_bBorder__BorderColor" mktoname="線の色" default="#777777" mktomodulescope="true" />
+    <meta class="mktoNumber" id="TextTitle_bBorder__BorderWeight" mktoname="線の太さ" default="1" min="1" max="300" units="px" step="1" mktomodulescope="true" />
+
+    <style>
+        h1 a:active {
+            color: red !important
+        }
+
+        h2 a:active {
+            color: red !important
+        }
+
+        h3 a:active {
+            color: red !important
+        }
+
+        h4 a:active {
+            color: red !important
+        }
+
+        h5 a:active {
+            color: red !important
+        }
+
+        h6 a:active {
+            color: red !important
+        }
+
+        h1 a:visited {
+            color: #1558d6 !important
+        }
+
+        h2 a:visited {
+            color: #1558d6 !important
+        }
+
+        h3 a:visited {
+            color: #1558d6 !important
+        }
+
+        h4 a:visited {
+            color: #1558d6 !important
+        }
+
+        h5 a:visited {
+            color: #1558d6 !important
+        }
+
+        h6 a:visited {
+            color: #1558d6 !important
+        }
+
+        .mktobtn a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 18px;
+        }
+
+        div.preheader {
+            display: none !important;
+            height: 0 !important;
+            margin: 0 !important;
+        }
+
+        @font-face {
+            font-family: 'NotoSansCJKjp', "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+            ;
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.googleapis.com/css?family=Noto+Sans+JP) format("NotoSansCJKjp");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* CLIENT-SPECIFIC STYLES */
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* RESET STYLES */
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        /* iOS BLUE LINKS */
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* GMAIL BLUE LINKS */
+        u+#body a {
+            color: inherit;
+            text-decoration: none;
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+
+        a {
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .footer a {
+            color: #4a4a4a !important;
+        }
+
+        a.button {
+            transition: all 0.3s ease;
+        }
+
+        a.button:hover {
+            border-radius: 100px !important;
+            text-decoration: none !important;
+        }
+
+        #moduleCTAWCustome_RED .button {
+            background-image: url('https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/button_red.png') !important;
+            background-size: 100% 100% !important;
+            background-repeat: no-repeat !important;
+        }
+
+        #moduleCTAWCustome_WHITE .button {
+            background-image: url('https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/button_white.png') !important;
+            background-size: 100% 100% !important;
+            background-repeat: no-repeat !important;
+        }
+
+
+
+        /* Display block allows us to stack elements */
+        /* Some more stacking elements */
+        /* Hide stuff */
+        /* This sets elements to 100% width and fixes the height issues too, a god send */
+        /* For the 2x2 stack */
+        /* Centers content on mobile */
+        @font-face {
+            font-family: 'NotoSansCJKjp', "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+            ;
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.googleapis.com/css?family=Noto+Sans+JP) format("NotoSansCJKjp");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+FF3C;
+        }
+
+        /* Based on The MailChimp Reset INLINE: Yes. */
+        /* Client-specific Styles */
+        /* Force Outlook to provide a "view in browser" menu link. */
+        /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+        .ExternalClass {
+            width: 100%;
+        }
+
+        /* Force Hotmail to display emails at full width */
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 1.6em;
+        }
+
+        /* Forces Hotmail to display normal line spacing. */
+        /* End reset */
+
+        /* Some sensible defaults for images
+      		Bring inline: Yes. */
+        /* Yahoo paragraph fix
+      		Bring inline: Yes. */
+        /* Hotmail header color reset
+      		Bring inline: Yes. */
+        /* Outlook 07, 10 Padding issue fix
+      		Bring inline: No. -----------------*/
+        /* Remove spacing around Outlook 07, 10 tables
+      		Bring inline: Yes */
+        /* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email and make sure to bring your styles inline.  Your link colors will be uniform across clients when brought inline.
+      		Bring inline: Yes. */
+
+        /***************************************************
+      		****************************************************
+      		MOBILE TARGETING
+      		****************************************************
+      		***************************************************/
+        @media only screen and (max-device-width: 480px) {
+
+            /* Part one of controlling phone number linking for mobile. */
+            a[href^="tel"],
+            a[href^="sms"] {
+                text-decoration: none;
+                color: blue;
+                /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"],
+            .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+        }
+
+        /* More Specific Targeting */
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+            /* You guessed it, ipad (tablets, smaller screens, etc) */
+            /* repeating for the ipad */
+            a[href^="tel"],
+            a[href^="sms"] {
+                text-decoration: none;
+                color: blue;
+                /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"],
+            .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: orange !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+        }
+
+        @media only screen and (min-width: 760px) {}
+
+        @media only screen and (min-width: 480px) and (max-width: 760px) {
+            #TextTitle_bold {
+                font-size: 1.18em !important;
+            }
+
+            #TextSentence {
+                font-size: 1.46em !important;
+            }
+
+            #TextEkiName {
+                font-size: 1.17em !important;
+            }
+
+            #TextEkiKanaName {
+                font-size: 1.375em !important;
+            }
+
+            #TextEkiEnName {
+                font-size: 1.384em !important;
+            }
+
+            #TextEkiSentence {
+                font-size: 1.428em !important;
+            }
+
+            .button {
+                font-size: 24px !important;
+                line-height: 70px !important;
+            }
+
+            .moduleTwoThumbnail_sentence {
+                font-size: 20px !important;
+                line-height: 30px !important;
+            }
+
+            .moduleTwoThumbnail_anker {
+                font-size: 18px !important;
+                line-height: 36px !important;
+            }
+
+            .moduleTwoThumbnail_info {
+                font-size: 15px !important;
+                line-height: 20px !important;
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body style="width:100%;margin:0;padding:0!important;background-color:#f2f2f2;box-sizing: border-box;text-align: justify;text-justify: inter-ideograph;-webkit-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-size-adjust: 100%">
+    <p style="margin:1em 0;"></p>
+    <!--[if mso]>
+        <style type="text/css">
+          body, table, td {font-family: Arial, Helvetica, sans-serif !important;}
+        </style>
+      <![endif]-->
+    <!-- Targeting Windows Mobile -->
+    <!--[if IEMobile 7]>
+      <![endif]-->
+    <!-- ***********************************************
+	****************************************************
+	END MOBILE TARGETING
+	****************************************************
+	************************************************ -->
+    <!--[if mso]>
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]-->
+    <!--[if lte mso 11]>
+        <style type="text/css">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+    <p></p>
+    <!--start preheader-->
+    <div class="preheader mktoText" style="display:none !important; visibility:hidden; opacity:0; color:transparent; height:0; width:0;" id="preheader" mktoname="Preheader Text">ここに</div>
+    <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <!--end preheader-->
+
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><![endif]-->
+    <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:#ffffff;margin:0;padding:0;width:100% !important;line-height:100% !important;max-width:600;margin: auto;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="mktoSnippet" id="snipetheader_logo" mktoname="ヘッダーのロゴ" mktoDefaultSnippetId="12" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#ffffff;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" class="mktoContainer" id="mkto-container" style="border-collapse:collapse;">
+
+                    <!-- START タイトル太字 -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellpadding="3" cellspacing="0" border="0" bgcolor="#ffffff" align="left" class="mktoModule" id="moduleTextTitle_bold" mktoName="タイトル_太文字" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding-left:10px;background-color:#ffffff;font-size: 22;">
+                                    <p class="mktoText" id="TextTitle_bold" mktoName="テキスト" style="text-align:left;font-size: 22;line-height:1.3em;font-weight:900;margin: 10px 0;color:#111111">小田急小田原線</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END タイトル太字 -->
+
+                    <!-- START 画像(リンクあり) -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellpadding="0" cellspacing="0" border="0" align="center" class="mktoModule" id="modulePicLink" mktoName="画像(リンクあり)" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="background-color:#ffffff;padding:0 5px;text-align:center;">
+                                    <div class="mktoImg" id="ImgMain" mktoName="画像" mktoImgLink="https://oh.openhouse-group.com/kanto/search/?st_line_c=2311" mktoImgSrc="https://oh.openhouse-group.com/sp/mail/act/003/img/odakyu.jpg">
+                                        <a>
+                                            <img src="https://oh.openhouse-group.com/sp/mail/act/003/img/odakyu.jpg" style="width:100;max-width:600;height:auto;backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END 画像(リンクあり) -->
+
+                    <!-- START 空白１-->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table class="mktoModule" cellpadding="0" cellspacing="0" bgcolor="#ffffff" border="0" align="center" id="spacer" width="100%" mktoname="Blank Space" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;max-width:600;margin:0 auto;background-color:#ffffff;">
+                        <tbody>
+                            <tr>
+                                <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;">
+                                    <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:40;font-size:40;" height="40">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END 空白１ -->
+
+                    <!-- START メインテキスト -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#ffffff" class="mktoModule" id="moduleTextSentence" mktoAddByDefault="true" mktoName="メインテキスト" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:98%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td align="left" style="padding:0;font-size:15;">
+                                    <p class="mktEditable" id="TextSentence" mktoName="文章" style="color:#111111;font-size:15;letter-spacing:2px;line-height:1.4em;-webkit-font-smoothing: antialiased;mso-line-height-rule:exactly; mso-line-height-alt:1.6;color:black;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;margin:0;">
+                                        小田急線は2018年3月、複々線化によるダイヤ改正が行われ、ラッシュ時の混雑状況が大幅に改善しました。乗車駅によっては、運転本数の増発や急行列車の所要時間短縮により、従来よりも新宿までのアクセスが10分程度短縮されました。さらに、千代田線乗り入れ本数が増加したことによって大手町方面への通勤にも大変便利になっています。
+                                        小田急線沿線の都市計画では、駅前であっても商業地域（高層の建物を建てやすいエリア）が少ないため、古くからの商店街など低層の建物が中心となっています。また、丘陵地帯が多く、公園や緑豊かな住環境に優れたエリア特徴となっています。
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END メインテキスト -->
+
+                    <!-- START CTA button -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#ffffff" class="mktoModule" id="moduleCTAButton" mktoAddByDefault="false" mktoName="おすすめ物件はこちらボタン" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td bgcolor="#fff" style="padding:20px;text-align: center;">
+                                    <div class="mktoImg" id="CTAButton" mktoName="画像" mktoImgLink="https://oh.openhouse-group.com/kanto/search/?st_line_c=2311&utm_source=area&utm_medium=dmail&utm_campaign=marketing&utm_term=odakyu-odawara-line_YYYYMMDD&utm_content=odakyu-odawara-line_btn1&banner_id=kanto" mktoImgSrc="https://oh.openhouse-group.com/sp/mail/act/003/img/btn.gif">
+                                        <a href="https://oh.openhouse-group.com/kanto/search/?st_line_c=2311&utm_source=area&utm_medium=dmail&utm_campaign=marketing&utm_term=odakyu-odawara-line_YYYYMMDD&utm_content=odakyu-odawara-line_btn1&banner_id=kanto">
+                                            <img style="outline: none;width:300px;backface-visibility: hidden; -webkit-backface-visibility: hidden;" border="0">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END CTA button -->
+
+                    <!-- START 画像(リンクなし) -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#ffffff" class="mktoModule" id="moduleImgNoLink" mktoAddByDefault="false" mktoName="画像(リンクなし)" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:10px;text-align:center;">
+                                    <img class="mktoImg" id="ImgNoLink" mktoName="画像リンクなし" src="https://oh.openhouse-group.com/sp/mail/act/003/img/routemap_odakyu.gif" mktoLockImgSize="false" style="width:100;max-width:600;height:auto;backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END 画像(リンクなし) -->
+
+                    <!-- START タイトル|左赤 -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#ffffff" class="mktoModule" id="moduleTextTitle_LBoderRed" mktoAddByDefault="false" mktoName="タイトル|左赤" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding-bottom: 15px;padding-left: 2%;">
+                                    <p class="mktEditable" id="TextTitle_LeftBoderRed" mktoName="タイトル（左棒）" style="font-weight:900 ;font-size: 20;line-height: 2em;border-left: 3 solid #ff0000;padding-left:8px;margin:0;color:#111111;">
+                                        住みやすい駅をピックアップ</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END タイトル|左赤 -->
+
+                    <!-- START タイトル|上下金 -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#ffffff" class="mktoModule" id="moduleTextTitle_TBBoderGold" mktoAddByDefault="false" mktoName="タイトル|上下金" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="display: block;padding: 20px 2%;">
+                                    <p class="mktEditable" id="TextTitle_TBBoderRed" mktoName="タイトル（上下金）" style="font-weight:600;font-size: 20;text-align: center;padding: 8px 0;border-top:solid 1 #BA8E12;border-bottom:solid 1 #BA8E12;margin:0;color:#111111">タイトル</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END タイトル|上下金 -->
+
+
+                    <!-- START \見出し/ -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="mktoModule" id="moduleTextTitle_Slash" mktoAddByDefault="false" mktoName="\見出し/" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="display: block;padding: 20px 2%;background-color: #ffffff !important;">
+                                    <h3 id="TextTitle_Slash" style="font-weight:900;font-size: 20;color:#111111;text-align: center;padding:0;margin:0;">\見出し/</h3>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END タイトル -->
+
+
+                    <!-- START タイトル|金色アンダーライン -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="mktoModule" id="moduleTextTitle_UBoderGold" mktoAddByDefault="false" mktoName="タイトル|金色アンダーライン" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="display: block;padding: 20px 2%;background-color: #ffffff !important;">
+                                    <h4 id="TextTitle_UBoderGold" style="font-weight:900;border-bottom: double 7 #BA8E12;font-size: 20;color: #111111;margin:0px;padding:10px">タイトル</h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END タイトル|金色アンダーライン -->
+
+                    <!-- START 駅情報_はじめ -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="mktoModule" id="moduleEkiSTART" mktoAddByDefault="false" mktoName="駅情報_はじめ" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="border-top: solid 3 #111111;width: 96%;margin: 0px 2%;display: block;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END 駅情報_はじめ -->
+
+                    <!-- START 駅情報_名前 -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleTextEkiName" mktoAddByDefault="false" mktoName="駅情報_名前" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;max-width:600;margin:0 auto;background-color:#ffffff;border: 0;padding: 0 20px;margin: 0 auto;width: 100%;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0 2%;margin: 0 17%;width: 98%;">
+                                    <table cellspacing="0" cellpadding="0" style="border-spacing: 0;border: 0; padding: 0 20px;width:100%;border-left: solid 3 #111111;border-right: solid 3 #111111;">
+                                        <tbody>
+                                            <tr style="font-size:24">
+                                                <td colspan="3" style="color:#111111;background-color:#ffffff; font-weight: bold; text-align: center;font-size:100%; padding:20px 0 0;;line-height:1.2em;" class="mktEditable" id="TextEkiName" mktoName="駅の名前">流山おおたかの森</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- START 駅情報_名前 -->
+
+                    <!-- START 駅情報_なまえ -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleTextEkiNameKana" mktoAddByDefault="false" mktoName="駅情報_なまえ" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;max-width:600;margin:0 auto;background-color:#ffffff;border: 0;padding: 0 20px;margin: 0 auto;width: 100%;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0 2%;margin: 0 17%;background-color:#ffffff;width: 98%;">
+                                    <table cellspacing="0" cellpadding="0" style="border-spacing: 0;border: 0; padding: 0 20px;width:100%;padding: 0 20px; width: 100%; border-left: solid 3 #111111; border-right: solid 3 #111111;">
+                                        <tbody>
+                                            <tr style="font-size:16">
+                                                <td colspan="3" style="color:#111111;padding:0 16px; background-color:#ffffff;font-weight: bold; text-align: center; padding: 0;font-size:100%;line-height:2em;" class="mktEditable" id="TextEkiKanaName" mktoName="駅の名前ひらがな">ながれやまおおたかのもり
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- START 駅情報_なまえ -->
+
+                    <!-- START 駅情報_Name -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleTextEkiNameEn" mktoAddByDefault="false" mktoName="駅情報_Name" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;max-width:600;margin:0 auto;background-color:#ffffff;border: 0;padding: 0 20px;margin: 0 auto;width: 100%;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0 2%;margin: 0 17%;background-color:#ffffff;width: 98%;">
+                                    <table cellspacing="0" cellpadding="0" style="border-spacing: 0;border: 0; padding: 0 20px;width:100%;padding: 0 20px; width: 100%; border-left: solid 3 #111111; border-right: solid 3 #111111;">
+                                        <tbody>
+                                            <tr bgcolor="#2288cc" style="background-color: #2288cc;font-size:13;">
+                                                <td width="23px"><img src="https://oh.openhouse-group.com/sp/mail/act/003/img/prev.png" alt="矢印" style="vertical-align: middle;"></td>
+                                                <td style="font-size:100%; font-weight: 800; text-align: center; color: #ffffff;" class="mktEditable" id="TextEkiEnName" mktoName="駅の名前En">
+                                                    Nagareyama-otakanomori</td>
+                                                <td width="23px"><img src="https://oh.openhouse-group.com/sp/mail/act/003/img/next.png" alt="矢印" style="vertical-align: middle;"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- START 駅情報_Name -->
+
+                    <!-- START 駅情報_文章 -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleTextEkiSentence" mktoAddByDefault="false" mktoName="駅情報_文章" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;max-width:600;margin:0 auto;background-color:#ffffff;border: 0;padding: 0 20px;margin: 0 auto;width: 100%;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0 2%;margin: 0 17%;background-color:#ffffff;width: 98%;">
+                                    <table cellspacing="0" cellpadding="10" style="border-spacing: 0;padding: 0 20px;width:100%;border-left: solid 3 #111111;border-right: solid 3 #111111;">
+                                        <tbody>
+                                            <tr>
+                                                <td bgcolor="#fff" style="font-size:14;text-align: justify;text-justify: inter-ideograph;font-size:15px;line-height:1.6;mso-line-height-rule:exactly; mso-line-height-alt:1.6;color:black;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;" class="mktEditable" id="TextEkiSentence" mktoName="駅の文章">
+                                                    <p style="text-align: justify;text-justify: inter-ideograph;font-size:100%;line-height:1.3;mso-line-height-rule:exactly; mso-line-height-alt:1.6;color:#111111;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                                                        快速急行の停車駅で、新宿までは25分です。駅周辺の大規模な土地区画整理が行われ、均整のとれた街づくりが特徴です。緑や公園も多く、駅から少し離れると閑静な住宅街が広がっています。駅周辺にはイオンやイトーヨーカドーといった、映画館や食品スーパーをを含めた大型の商業施設があります。駅前バスターミナルからは、羽田空港や成田空港への高速バスも発着しており、出張の多い方にもおすすめです。
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- START 駅情報_文章 -->
+
+                    <!-- START 駅情報_ボタン -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleTextEkiButton" mktoAddByDefault="false" mktoName="駅情報_ボタン" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;max-width:600;margin:0 auto;background-color:#ffffff;border: 0;padding: 0 20px;margin: 0 auto;width: 100%;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0 2%;margin: 0 17%;background-color:#ffffff;width: 98%;">
+                                    <table cellspacing="0" cellpadding="0" style="border-spacing: 0;border: 0; padding: 0 20px;width:100%;padding: 0 20px; width: 100%; border-left: solid 3 #111111; border-right: solid 3 #111111;">
+                                        <tbody>
+                                            <tr>
+                                                <td bgcolor="#fff" colspan="3" align="center">
+                                                    <div class="mktoImg" id="CTAEki" mktoName="CTAEki" mktoImgLink="https://oh.openhouse-group.com/kanto/search/?st_line_c=2311230&utm_source=area&utm_medium=dmail&utm_campaign=marketing&utm_term=odakyu-odawara-line_YYYYMMDD&utm_content=shinyurigaoka-eki_btn&banner_id=kanto" mktoImgSrc="https://oh.openhouse-group.com/sp/mail/act/003/img/btn_3rd.gif">
+                                                        <a>
+                                                            <img style="outline: none; margin: 0 20% 15px;width:60%" src="https://oh.openhouse-group.com/sp/mail/act/003/img/btn_3rd.gif" />
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END 駅情報_ボタン-->
+
+                    <!-- START 駅情報_おわり -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="mktoModule" id="moduleEkiEnd" mktoAddByDefault="false" mktoName="駅情報_おわり" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="border-bottom:solid 3 #111111;width: 96%;margin: 0px 2%;display: block;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END 駅情報_おわり -->
+
+                    <!-- START 線路 -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="modulePicSenro" mktoAddByDefault="false" mktoName="線路" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr style="background-color: #fff;">
+                                <td style="text-align:center;background-color:#ffffff;">
+                                    <img style="vertical-align: bottom;width:15px;" src="https://oh.openhouse-group.com/sp/mail/act/003/img/track_jr2.gif" class="mktoImg" id="PicSenro" mktoName="線路">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END 線路-->
+
+                    <!-- START 画像２つ横並び -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleRowTwoIMG" mktoName="画像２つ横並び" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0 10px 0 10px; background-color: #ffffff;">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="top" width="50%">
+                                                <table cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color:#ffffff;padding:0 5px;">
+                                                                <div class="mktoImg" id="RowTwoIMG_first" mktoName="画像" mktoImgLink="https://oh.openhouse-group.com/kanto/search/?st_line_c=2311" mktoImgSrc="https://via.placeholder.com/300">
+                                                                    <a>
+                                                                        <img src="https://via.placeholder.com/300" width="300" height="" alt="alt_text" border="0" style="width:100%;max-width:600;height:auto;backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="50%">
+                                                <table cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color:#ffffff;padding:0 5px;">
+                                                                <div class="mktoImg" id="RowTwoIMG_second" mktoName="画像" mktoImgLink="https://oh.openhouse-group.com/kanto/search/?st_line_c=2311" mktoImgSrc="https://via.placeholder.com/300">
+                                                                    <a>
+                                                                        <img src="https://via.placeholder.com/300" width="300" height="" alt="alt_text" border="0" style="width:100%;max-width:600;height:auto;backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END 画像２つ横並び  -->
+
+                    <!-- START 画像２つサムネイル -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleTwoThumbnail" mktoName="サムネイル横並び" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0 10px 0 10px; background-color: #ffffff;">
+
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="top" width="50%">
+                                                <a href="https://via.placeholder.com/300" style="text-decoration: none !important">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="96%" style="border: solid 1px gray;margin: auto">
+                                                        <tr>
+                                                            <td style="text-align: center;">
+                                                                <div class="mktoImg" id="twoThumbnail_first" mktoName="画像" mktoImgLink="https://oh.openhouse-group.com/kanto/search/?st_line_c=2311" mktoImgSrc="https://via.placeholder.com/300">
+                                                                    <a>
+                                                                        <img src="https://via.placeholder.com/300" width="300" height="" alt="alt_text" border="0" style="width: 100%; max-width: 300px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+
+                                                            <td style="text-align: left; font-family: sans-serif; font-size: 10;line-height: 1.8em; color: #555555; padding: 10px 5px;">
+                                                                <p class="moduleTwoThumbnail_sentence mktoText" id="twoThumbnail_firstCase" mktoName="CASE" style="margin: 0;font-size: 120%;font-weight: 3;text-decoration: none !important;color:#555555">Case.02</p>
+                                                                <p class="moduleTwoThumbnail_sentence mktoText" id="twoThumbnail_firstTitle" mktoName="タイトル" style="margin: 0;font-size: 100%;font-weight: 3;text-decoration: none !important;color:#555555">スタイリッシュモダンの家</p>
+                                                                <p class="moduleTwoThumbnail_info mktoText" id="twoThumbnail_firstIbfo" mktoName="情報" style="margin: 0;font-size: 80%;font-weight: 3;text-decoration: none !important;color:#686868">川崎エリア&nbsp;1,800万円台&nbsp;土地〜40m<sup>2</sup></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align: left; font-family: sans-serif; font-size: 10; line-height: 2em; color: #ffffff; padding: 10px 5px;background: #2288cc;font-weight: 900;">
+                                                                <p class="moduleTwoThumbnail_anker" style="margin: 0;font-size: 100%;text-decoration: none !important;">▶︎&nbsp;詳しくはこちらをクリック</p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </a>
+                                            </td>
+                                            <td valign="top" width="50%">
+                                                <a href="https://via.placeholder.com/300" style="text-decoration: none !important">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="96%" style="border: solid 1px gray;margin: auto">
+                                                        <tr>
+                                                            <td style="text-align: center;">
+                                                                <div class="mktoImg" id="twoThumbnail_second" mktoName="画像" mktoImgLink="https://oh.openhouse-group.com/kanto/search/?st_line_c=2311" mktoImgSrc="https://via.placeholder.com/300">
+                                                                    <a>
+                                                                        <img src="https://via.placeholder.com/300" width="300" height="" alt="alt_text" border="0" style="width: 100%; max-width: 300px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+
+                                                            <td style="text-align: left; font-family: sans-serif; font-size: 10;line-height: 1.8em; color: #555555; padding: 10px 5px;">
+                                                                <p class="moduleTwoThumbnail_sentence mktoText" id="twoThumbnail_secondCase" mktoName="CASE" style="margin: 0;font-size: 120%;font-weight: 3;text-decoration: none !important;color:#555555">Case.02</p>
+                                                                <p class="moduleTwoThumbnail_sentence mktoText" id="twoThumbnail_secondTitle" mktoName="タイトル" style="margin: 0;font-size: 100%;font-weight: 3;text-decoration: none !important;color:#555555">スタイリッシュモダンの家</p>
+                                                                <p class="moduleTwoThumbnail_info mktoText" id="twoThumbnail_secondInfo" mktoName="情報" style="margin: 0;font-size: 80%;font-weight: 3;text-decoration: none !important;color:#686868">川崎エリア&nbsp;1,800万円台&nbsp;土地〜40m<sup>2</sup></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align: left; font-family: sans-serif; font-size: 10; line-height: 2em; color: #ffffff; padding: 10px 5px;background: #2288cc;font-weight: 900;">
+                                                                <p class="moduleTwoThumbnail_anker" style="margin: 0;font-size: 10px;text-decoration: none !important;">▶︎&nbsp;詳しくはこちらをクリック</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--[if mso | IE]></table><![endif]-->
+                    <!-- END 画像２つサムネイル   -->
+
+                    <!-- START ２つ横並びボタン -->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleRowCTAButton" mktoName="２つ横並びボタン" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0 10px 0 10px; background-color: #ffffff;">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="top" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="96%" style="margin: auto">
+                                                    <tr>
+                                                        <td style="text-align: center;">
+                                                            <center>
+                                                                <div style="display:table;background:#fff;width:100%;font-size:12;">
+                                                                    <!--[if mso]>
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://oh.openhouse-group.com/" style="height:50;v-text-anchor:middle;width:250px;" arcsize="15%" stroke="f" fillcolor="#B200FD">
+                                        <w:anchorlock/>
+                                        <center>
+                                        <![endif]-->
+                                                                    <a class="button" href="https://oh.openhouse-group.com/" style="background-color:#B200FD;border-radius:4px;color:#ffffff;display:inline-block;font-size:100%;font-family:sans-serif;font-weight:bold;line-height:50;text-align:center;text-decoration:none;width:100;-webkit-text-size-adjust:none;">CliCK</a>
+                                                                    <!--[if mso]>
+                                        </center>
+                                        </v:roundrect>
+                                        <![endif]-->
+                                                                </div>
+                                                            </center>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="50%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="96%" style="margin: auto">
+                                                    <tr>
+                                                        <td style="text-align: center;">
+                                                            <center>
+                                                                <div style="display:table;background:#fff;width:100%">
+                                                                    <!--[if mso]>
+                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://oh.openhouse-group.com/" style="height:50;v-text-anchor:middle;width:250px;" arcsize="15%" stroke="f" fillcolor="#B200FD">
+                                        <w:anchorlock/>
+                                        <center>
+                                        <![endif]-->
+                                                                    <a class="button" href="https://oh.openhouse-group.com/" style="background-color:#B200FD;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:12;font-weight:bold;line-height:50;text-align:center;text-decoration:none;width:100;-webkit-text-size-adjust:none;">CliCK</a>
+                                                                    <!--[if mso]>
+                                        </center>
+                                        </v:roundrect>
+                                        <![endif]-->
+                                                                </div>
+                                                            </center>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- END ２つ横並びボタン -->
+                    <!--[if mso | IE]></table><![endif]-->
+
+                    <!-- START 画像3つ横並び-->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleRowThreeIMG" mktoName="画像3つ横並び" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0 10px 0 10px; background-color: #ffffff;">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="top" width="33.333333%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td style="text-align: center; padding: 0 5px;">
+                                                            <div class="mktoImg" id="RowThreeIMG_first" mktoName="画像" mktoImgLink="https://oh.openhouse-group.com/kanto/search/?st_line_c=2311" mktoImgSrc="https://via.placeholder.com/200">
+                                                                <a>
+                                                                    <img src="https://via.placeholder.com/200" width="300" height="" alt="alt_text" border="0" style="width: 100%; max-width: 250px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="33.333333%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td style="text-align: center; padding: 0 5px;">
+                                                            <div class="mktoImg" id="RowThreeIMG_second" mktoName="画像" mktoImgLink="https://oh.openhouse-group.com/kanto/search/?st_line_c=2311" mktoImgSrc="https://via.placeholder.com/200">
+                                                                <a>
+                                                                    <img src="https://via.placeholder.com/200" width="300" height="" alt="alt_text" border="0" style="width: 100%; max-width: 250px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td valign="top" width="33.333333%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td style="text-align: center; padding: 0 5px;">
+                                                            <div class="mktoImg" id="RowThreeIMG_three" mktoName="画像" mktoImgLink="https://oh.openhouse-group.com/kanto/search/?st_line_c=2311" mktoImgSrc="https://via.placeholder.com/200">
+                                                                <a>
+                                                                    <img src="https://via.placeholder.com/200" width="300" height="" alt="alt_text" border="0" style="width: 100%; max-width: 250px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- END 画像3つ横並び -->
+                    <!--[if mso | IE]></table><![endif]-->
+
+                    <!-- START カスタムボタンCTA-->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleCTAWCustome" mktoName="カスタムボタンCTA" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr style="background-color: #fff;">
+                                <td align="center" class="mktoText" id="CTAWCustome" mktoName="カスタムボタン">
+                                    <center>
+                                        <div style="mdisplay:table;background:#fff;width:100%;max-width: 600px;">
+                                            <!--[if mso]>
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://oh.openhouse-group.com/" style="height:50;v-text-anchor:middle;width:70;" arcsize="15%" stroke="f" fillcolor="#B200FD">
+                <w:anchorlock/>
+                <center>
+                <![endif]-->
+                                            <a class="button" href="https://oh.openhouse-group.com/" style="background-color:#B200FD;border-radius:4px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:18;font-weight:3;line-height:50;text-align:center;text-decoration:none;width:70;-webkit-text-size-adjust:none;">Get Accessible Now</a>
+                                            <!--[if mso]>
+                </center>
+                </v:roundrect>
+                <![endif]-->
+                                        </div>
+                                    </center>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- END カスタムボタンCTA -->
+                    <!--[if mso | IE]></table><![endif]-->
+
+
+                    <!-- START カスタムボタンCTA_WHITE-->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleCTAWCustome_WHITE" mktoName="カスタムボタンCTA_WHITE" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr sftyle="background-color: #fff;">
+                                <td align="center" class="mktoText" id="CTAWCustome_WHITE" mktoName="カスタム白ボタン">
+                                    <center>
+                                        <div style="display:table;background:#fff;width:100%;max-width: 600px;">
+                                            <!--[if mso]>
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://oh.openhouse-group.com/" style="height:50;v-text-anchor:middle;width:70;" arcsize="15%" stroke="f" fillcolor="#B200FD">
+               
+                <w:anchorlock/>
+                <center>
+                <![endif]-->
+
+                                            <a href="https://oh.openhouse-group.com/" class="button" style="background-color: white; ;background: -moz-linear-gradient(to top,rgba(204,204,204,.5) 0,rgba(255,255,255,.5) 10%,rgba(255,255,255,.5) 100%);
+                                              background: -webkit-gradient(left top, left bottom, color-stop(0%, #cccccc), color-stop(10%, #ffffff), color-stop(100%, #ffffff));
+                                              background: -webkit-linear-gradient(to top,rgba(204,204,204,.5) 0,rgba(255,255,255,.5) 10%,rgba(255,255,255,.5) 100%);
+                                              background: -o-linear-gradient(to top,rgba(204,204,204,.5) 0,rgba(255,255,255,.5) 10%,rgba(255,255,255,.5) 100%);
+                                              background: -ms-linear-gradient(to top,rgba(204,204,204,.5) 0,rgba(255,255,255,.5) 10%,rgba(255,255,255,.5) 100%);
+                                              background: linear-gradient(to top,rgba(204,204,204,.5) 0,rgba(255,255,255,.5) 10%,rgba(255,255,255,.5) 100%);
+                                              color: #111111;display:inline-block;font-family:sans-serif;font-size:15;text-transform:uppercase;letter-spacing:.02em;line-height:50;text-align:center;text-decoration:none;width:70;-webkit-text-size-adjust:none;border: 1px solid #ccc;border-radius:5px;font-weight:3">Get Accessible Now</a>
+                                            <!--[if mso]>
+                                                  </center>
+                                                </v:rect>
+                                              <![endif]-->
+                                        </div>
+                                    </center>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- END カスタムボタンCTA_WHITE -->
+                    <!--[if mso | IE]></table><![endif]-->
+
+                    <!-- START カスタムボタンCTA_RED-->
+                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+                    <table cellspacing="0" cellpadding="0 " border="0" width="100%" class="mktoModule" id="moduleCTAWCustome_RED" mktoName="カスタムボタンCTA_RED" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                        <tbody>
+                            <tr style="background-color: #fff;width:100%">
+                                <td align="center" class="mktoText" id="CTAWCustome_RED" mktoName="カスタム赤ボタン">
+                                    <center>
+                                        <div style="display:table;background:#ffffff;width:100%;max-width: 600px;">
+                                            <!--[if mso]></div>
+                                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://oh.openhouse-group.com/" style="height:50;v-text-anchor:middle;width:70;" arcsize="15%" stroke="f" fillcolor="#d9101d">
+               
+                                                <w:anchorlock/>
+                                                <center>
+                                             <![endif]-->
+
+
+                                            <a href="http://" class="button" style="background: -moz-linear-gradient(to bottom,#d9101d 0,#d9101d 88%,#af0103 100%);
+                                              background: -webkit-gradient(left top, left bottom, color-stop(0%, #d9101d), color-stop(88%, #af0103), color-stop(100%, #af0103));
+                                              background: -webkit-linear-gradient(to bottom,#d9101d 0,#d9101d 88%,#af0103 100%);
+                                              background: -o-linear-gradient(to bottom,#d9101d 0,#d9101d 88%,#af0103 100%);
+                                              background: -ms-linear-gradient(to bottom,#d9101d 0,#d9101d 88%,#af0103 100%);
+                                              background: linear-gradient(to bottom,#d9101d 0,#d9101d 88%,#af0103 100%);
+                                              color: #ffffff;display:inline-block;font-family:sans-serif;font-size:15;text-transform:uppercase;letter-spacing:.02em;line-height:50;text-align:center;text-decoration:none;width:70;-webkit-text-size-adjust:none;border: 1px solid #d9101d;border-radius:5px;font-weight:3">Get Accessible Now</a>
+                                            <!--[if mso]>
+                                    </center>
+                                    </v:rect>
+                                    <![endif]-->
+                                        </div>
+                                    </center>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- END カスタムボタンCTA_RED -->
+                    <!--[if mso | IE]>
+                    </table>
+                    <![endif]-->
+
+                    <!-- START CTA（下線）-->
+                    <!--[if mso | IE]>
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <![endif]-->
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="mktoModule" id="moduleTextTitle_bBorder" mktoAddByDefault="false" mktoName="タイトル|下線" mktoAddByDefault="false" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;">
+                        <tbody>
+                            <tr>
+                                <td style="display: block;padding: 0 10px 0 10px;background-color: #ffffff !important;">
+                                    <h3 style="font-weight:3;font-size: 16;color:#ffffff;text-align: left;padding: 16px 0;border-bottom:solid 1 #777777;margin:0;">Get Accessible Now</h3>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- END CTA（下線） -->
+                    <!--[if mso | IE]>
+                    </table>
+                    <![endif]-->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table cellpadding=" 0" cellspacing="0" border="0" id="backgroundTable" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:#ffffff;margin:0;padding:0;width:100% !important;line-height:100% !important;">
+        <tbody>
+            <tr>
+                <div class="mktoSnippet" id="textFooterSentence" mktoname="※万が一、本メールに・・・" mktoDefaultSnippetId="17" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;">
+                </div>
+                <div class="mktoSnippet" id="snipetFooterLogo" mktoname="フッターのロゴ" mktoDefaultSnippetId="13" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;">
+                </div>
+                <div class="mktoSnippet" id="snipetSNSlinks" mktoname="SNSのリンク" mktoDefaultSnippetId="16" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;">
+                </div>
+                <div class="mktoSnippet" id="snipetFotterLinks" mktoname="個人情報保護方針など" mktoDefaultSnippetId="14" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600;margin:0 auto;background-color:#ffffff;">
+                </div>
+
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
