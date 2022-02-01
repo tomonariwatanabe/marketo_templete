@@ -19,10 +19,15 @@
   "description": "",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-cheerio": "^1.0.0"
+    "gulp-cheerio": "^1.0.0",
+    "gulp-juice": "^0.1.0",
+    "gulp-mail": "^0.4.1"
   },
   "dependencies": {
+    "gmail-send": "^1.8.14",
     "gulp-map": "0.0.2",
-    "map-stream": "0.0.7"
+    "map-stream": "0.0.7",
+    "minimist": "^1.2.5",
+    "nodemailer": "^6.7.2"
   }
 }

@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var cheerio = require('cheerio');
 var map = require('map-stream');
+var minimist = require('minimist');
+var browserSync = require('browser-sync');
 
 gulp.task('default', function (done) {
     gulp.src('./static_templete/templete.html')
