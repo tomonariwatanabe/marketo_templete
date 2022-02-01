@@ -5,7 +5,7 @@ var minimist = require('minimist');
 var browserSync = require('browser-sync');
 
 gulp.task('default', function (done) {
-    gulp.src('./static_templete/templete.html')
+    gulp.src('./*_templete/*.html')
         .pipe(map(function (file, done) {
             var html = file.contents.toString();
             var $$ = cheerio.load(html);
