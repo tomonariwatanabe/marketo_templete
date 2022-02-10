@@ -24,14 +24,15 @@ Add multiple array using an image link on marketo image
 Set data from custome object data on marketo
 *#
 #set ($d = '$')
-#foreach($object in $view_ranking_top5List)
-#if($object.mail_key.contains('browsing_ohd_bukken_ranking_in_7days'))
+#foreach($object in $non_reserve_bukkenList)
+#if($object.mail_key.contains('document_request_ranking'))
 #foreach ($i in [1..5])
 #set ($bukken_img_url = "${d}object.bukken_img_url_${i}")
 #set ($bukken_url = "${d}object.bukken_url_${i}")
 #set($bukken_base_url = "#evaluate($bukken_url)")
 #set($bukken_id = $bukken_base_url.replaceAll("https?:\/{2,}.*?\/(.*)/(.*)/(.*)\/", "$3"))
 #set ($full_address = "${d}object.full_address_${i}")
+#set ($station_accsess = "${d}object.station_accsess_${i}")
 #set ($price = "${d}object.price_${i}")
 #set ($title = "${d}object.title_${i}")
 #set ($free_catch = "${d}object.free_catch_${i}")
@@ -80,8 +81,7 @@ The parameter comented is using mytoken
 #set( $ISO8601DateOnly = "yyyyMMdd" )
 #set( $nowData_YYYYMMDD = $date.format($ISO8601DateOnly,$calNow,$defaultLocale,$defaultTimeZone) ) -->
 
-
-
+#if($bukken_id.matches("\d{4,10}"))
 <!-- START ランキング物件 -->
 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
 <table cellspacing="0" cellpadding="12px" border="0" width="100%" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:white;">
@@ -108,7 +108,7 @@ The parameter comented is using mytoken
                     <tbody>
                         <tr>
                             <td>
-                                <a href="http://${bukken_base_url}?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=title&utm_content=${utm_content}&utm_term=${utm_term}&banner_id=${nowData_YYYYMMDD}">
+                                <a href="https://${bukken_base_url}?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=title&utm_content=${utm_content}&utm_term=${utm_term}&banner_id=${nowData_YYYYMMDD}">
                                     <p style="font-size: 16px;mso-ansi-font-size:16px;line-height: 1.4em;background-color: #FFFEF8;color:#215EAF;text-align: center;font-weight: 900;">#evaluate($title)</p>
                                 </a>
                             </td>
@@ -126,7 +126,7 @@ The parameter comented is using mytoken
                         </tr>
                         <tr>
                             <td>
-                                <p style="font-size: 14px;mso-ansi-font-size:14px;line-height: 1.4em;background-color: #FFFEF8;color:#000000;text-align: center;">#evaluate($full_address)<br>名古屋線 戸田駅 徒歩 10分<br>#evaluate($price)</p>
+                                <p style="font-size: 14px;mso-ansi-font-size:14px;line-height: 1.4em;background-color: #FFFEF8;color:#000000;text-align: center;">#evaluate($full_address)<br>#evaluate($station_accsess)<br>#evaluate($price)</p>
                             </td>
                         </tr>
                         <tr width="100">
@@ -200,6 +200,7 @@ The parameter comented is using mytoken
 </table>
 <!--[if mso | IE]></table><![endif]-->
 <!-- END ランキング物件 -->
+#end
 #end
 #end
 #end
