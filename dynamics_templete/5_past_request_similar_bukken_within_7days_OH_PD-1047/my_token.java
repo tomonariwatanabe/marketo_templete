@@ -14,8 +14,47 @@ Set data from custome object data on marketo
 #set($osusume_bukken_accsess = "#evaluate($osusume_bukken_accsess)")
 #if(!$osusume_bukken_accsess.contains('$'))
 
+#*
+Build utm_parameter
+The parameter comented is using mytoken
+*#
+#if(${object.area_name}=="全国")
+#set($utm_campaign = "mkt_all_area")
+#elseif(${object.area_name}=="関東")
+#set($utm_campaign = "mkt_kanto")
+#elseif(${object.area_name}=="関西")
+#set($utm_campaign = "mkt_kansai")
+#elseif(${object.area_name}=="東京")
+#set($utm_campaign = "mkt_tokyo")
+#elseif(${object.area_name}=="神奈川")
+#set($utm_campaign = "mkt_kanagawa")
+#elseif(${object.area_name}=="千葉")
+#set($utm_campaign = "mkt_chiba")
+#elseif(${object.area_name}=="埼玉")
+#set($utm_campaign = "mkt_saitama")
+#elseif(${object.area_name}=="愛知")
+#set($utm_campaign = "mkt_aichi")
+#elseif(${object.area_name}=="大阪")
+#set($utm_campaign = "mkt_osaka")
+#elseif(${object.area_name}=="福岡")
+#set($utm_campaign = "mkt_fukuoka")
+#else
+#set($utm_campaign = "mkt_other")
+#end
+
+#set($utm_medium = "mkt_dy_mail")
+#set($utm_content = "past_request_similar_bukken_within_90days")
+
+#set( $defaultTimeZone = $date.getTimeZone().getTimeZone("Asia/Tokyo") )
+#set( $defaultLocale = $date.getLocale() )
+#set( $calNow = $date.getCalendar() )
+#set( $ret = $calNow.setTimeZone($defaultTimeZone) )
+#set( $calConst = $field.in($calNow) )
+#set( $ISO8601DateOnly = "yyyyMMdd" )
+#set( $nowData_YYYYMMDD = $date.format($ISO8601DateOnly,$calNow,$defaultLocale,$defaultTimeZone) )
+
 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-<table cellspacing="0" cellpadding="20px" border="0" width="100%" class="mktoModule" id="moduleRanking_spacer" mktoName="ランキング＿空白" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;background-color:${GlobalBackgroundColor};">
+<table cellspacing="0" cellpadding="20px" border="0" width="100%" class="mktoModule" id="moduleRanking_spacer" mktoName="ランキング＿空白" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:${GlobalBackgroundColor};">
     <tbody>
         <tr>
             <td>
@@ -25,9 +64,9 @@ Set data from custome object data on marketo
 </table>
 <!--[if mso | IE]></table><![endif]-->
 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-<table cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;background-color:#FFFEF8;padding:0 11%">
+<table cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#FFFEF8;padding:0 11%">
     <tbody>
-        <tr style="max-width:${GlobalWidth};width:100%">
+        <tr style="max-width:600px;width:100%">
             <td style="padding:0;">
                 <img width="100%" alt="価格でおすすめの物件" src="http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/ttl01.png">
             </td>
@@ -53,7 +92,7 @@ Set data from custome object data on marketo
 
         #set ($utm_term = "property_municipality_0${i}")
 
-        <tr style="max-width:${GlobalWidth};width:100%">
+        <tr style="max-width:600px;width:100%">
             <td style="padding:0;background-color:#FFFEF8;">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
                 <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse;border-spacing: 0;border: 0; padding: 0;margin:0 auto ;width:80%;max-width: 480px;">
@@ -159,7 +198,7 @@ Set data from custome object data on marketo
 </table>
 <!--[if mso | IE]></table><![endif]-->
 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-<table cellspacing="0" cellpadding="20px" border="0" width="100%" class="mktoModule" id="moduleRanking_spacer" mktoName="ランキング＿空白" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;background-color:#FFFEF8;">
+<table cellspacing="0" cellpadding="20px" border="0" width="100%" class="mktoModule" id="moduleRanking_spacer" mktoName="ランキング＿空白" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#FFFEF8;">
     <tbody>
         <tr>
             <td>
