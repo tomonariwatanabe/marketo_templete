@@ -50,6 +50,7 @@ Add multiple array using an image link on marketo image
 #*
 Set data from custome object data on marketo
 *#
+
 #foreach($object in $ensen_eki_view_req_ranking_top7List)
 #if($object.mail_key.contains('ensen_eki_browsing_ranking_in_7days'))
 #foreach ($i in [1..7])
