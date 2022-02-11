@@ -5,44 +5,44 @@ Add multiple array using an image link on marketo image
 [{
 "ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1.png",
 "ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1_line.png",
-"ranking_border_line_color":"#FBF8E5",
-"line_title":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1_line_title.png",
+"ranking_border_line_color":"#e5c464",
+"line_title":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1_little_title.png",
 "station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1_station_title.png"
 },{
 "ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/2.png",
 "ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/2_line.png",
-"ranking_border_line_color":"#F6F6F5",
-"line_title":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/2_line_title.png",
+"ranking_border_line_color":"#B2B2B2",
+"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/2_little_title.png",
 "station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/2_station_title.png"
 },{
 "ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/3.png",
 "ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/3_line.png",
-"ranking_border_line_color":"#F9F3EC",
-"line_title":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/3_line_title.png",
+"ranking_border_line_color":"#A07668",
+"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/3_little_title.png",
 "station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/3_station_title.png"
 },{
 "ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/4.png",
 "ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/4_line.png",
-"ranking_border_line_color":"#F1F2F3",
-"line_title":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_line_title.png",
+"ranking_border_line_color":"#7C96B1",
+"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_little_title.png",
 "station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_station_title.png"
 },{
 "ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/5.png",
 "ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/5_line.png",
-"ranking_border_line_color":"#F1F2F3",
-"line_title":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_line_title.png",
+"ranking_border_line_color":"#7C96B1",
+"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_little_title.png",
 "station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_station_title.png"
 },{
 "ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/6.png",
 "ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/6_line.png",
-"ranking_border_line_color":"#F1F2F3",
-"line_title":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_line_title.png",
+"ranking_border_line_color":"#7C96B1",
+"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_little_title.png",
 "station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_station_title.png"
 },{
 "ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/7.png",
 "ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/7_line.png",
-"ranking_border_line_color":"#F1F2F3",
-"line_title":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_line_title.png",
+"ranking_border_line_color":"#7C96B1",
+"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_little_title.png",
 "station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_station_title.png"
 }])
 
@@ -50,15 +50,14 @@ Add multiple array using an image link on marketo image
 #*
 Set data from custome object data on marketo
 *#
-#set ($d = '$')
 #foreach($object in $ensen_eki_view_req_ranking_top7List)
 #if($object.mail_key.contains('ensen_eki_browsing_ranking_in_7days'))
 #foreach ($i in [1..7])
 
-#set ($ensen_name = "${d}object.ensen_name_${i}")
-#set ($eki_name = "${d}object.eki_name_${i}")
-#set ($eki_search_url= "${d}object.eki_search_url_${i}")
-#set ($ensen_search_url= "${d}object.ensen_search_url_${i}")
+#set ($ensen_name = "${esc.d}object.ensen_name_${i}")
+#set ($eki_name = "${esc.d}object.eki_name_${i}")
+#set ($eki_search_url= "${esc.d}object.eki_search_url_${i}")
+#set ($ensen_search_url= "${esc.d}object.ensen_search_url_${i}")
 
 #set($j = $i - 1)
 #set($ranking_crown_img_url = $bukken_ranking_img[$j].ranking_crown_img_url)
@@ -112,25 +111,25 @@ The parameter comented is using mytoken
 
 <!-- START ランキング -->
 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-<table cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;background-color:${GlobalBackgroundColor};padding:0 11%">
+<table cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#fbf8eb;padding:0 11%">
     <tbody>
-        <tr style="max-width:${GlobalWidth};width:100%">
-            <td style="padding:12px;background-color:${GlobalBackgroundColor};">
-            </td>
-        </tr>
-        <tr style="max-width:${GlobalWidth};width:100%">
+    <tr style="max-width:600px;width:100%">
+    <td style="padding:12px;background-color:#fbf8eb;">
+    </td>
+</tr>
+        <tr style="max-width:600px;width:100%">
             <td style="padding:0;">
                 <img width="100%" alt="第$i位" src="$ranking_crown_img_url">
             </td>
         </tr>
-        <tr style="max-width:${GlobalWidth};width:100%">
-            <td style="padding:0;background-color:${GlobalBackgroundColor};">
+        <tr style="max-width:600px;width:100%">
+            <td style="padding:0;">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse;border-spacing: 0;border: 0; padding: 0;margin:0 auto ;width:80%;max-width: 480px;">
+                <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: separate !important;border-spacing: 0;border: 0; padding: 0;margin:0 auto ;width:80%;max-width: 480px;">
                     <tbody>
                         <tr width="100">
                             <td>
-                                <table cellspacing="0" cellpadding="12px" border="0" width="100%" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;">
+                                <table cellspacing="0" cellpadding="12px" border="0" width="100%" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;">
                                     <tr>
                                         <td></td>
                                     </tr>
@@ -150,7 +149,7 @@ The parameter comented is using mytoken
                         </tr>
                         <tr>
                             <td align="center" style="background-color: #FFFFFF;border-left: solid 1px $ranking_border_line_colorborder-right: solid 1px $ranking_border_line_color;box-sizing: border-box;">
-                                <p style="margin:0;padding-bottom: 1.5em;border-left: solid 1px $ranking_border_line_color ;border-right: solid 1px $ranking_border_line_color;box-sizing: border-box;">
+                                <p style="margin:0;padding-bottom: 1.5em;background-color: #FFFFFF;border-left: solid 1px $ranking_border_line_color ;border-right: solid 1px $ranking_border_line_color;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
                                                         <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="$ensen_search_url" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                                           <w:anchorlock/>
@@ -177,8 +176,8 @@ The parameter comented is using mytoken
 
                         <!-- ボタンをテキストにする場合 -->
                         <tr>
-                            <td align="center" style="background-color: #FFFFFF;">
-                                <p style="margin:0;padding-bottom: 1.5em;border-left: solid 1px $ranking_border_line_color;border-right: solid 1px $ranking_border_line_color;border-bottom: solid 1px $ranking_border_line_color;box-sizing: border-box;">
+                            <td align="center" style="background-color: #FFFFFF;border-left: solid 1px $ranking_border_line_color;border-right: solid 1px $ranking_border_line_color;border-bottom: solid 1px $ranking_border_line_color;border-radius:0px 0px 3px 3px;">
+                                <p style="margin:0;padding-bottom: 1.5em;">
                                     <!--[if gte mso | IE]>
                                                         <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="$eki_search_url" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                                           <w:anchorlock/>
@@ -197,7 +196,7 @@ The parameter comented is using mytoken
         </tr>
         <tr width="100">
             <td>
-                <table cellspacing="0" cellpadding="12px" border="0" width="100%" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;">
+                <table cellspacing="0" cellpadding="12px" border="0" width="100%" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;">
                     <tr>
                         <td></td>
                     </tr>
