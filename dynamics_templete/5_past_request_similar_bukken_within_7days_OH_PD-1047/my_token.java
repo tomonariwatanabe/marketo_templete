@@ -1,4 +1,4 @@
-#set($title_name = "municipality_id")
+#set($title_name3 = "municipality_id")
 
 #*
 Set link from custome object data on marketo
@@ -6,7 +6,7 @@ Set link from custome object data on marketo
 #foreach($object in $similar_to_past_req_bukkenList)
 #if($object.mail_key.contains('past_request_similar_bukken_in_90days'))
 #foreach ($i in [1..2])
-#set ($bukken_url = "${esc.d}object.${title_name}_osusume_bukken_url_${i}")
+#set ($bukken_url = "${esc.d}object.${title_name3}_osusume_bukken_url_${i}")
 #set($bukken_base_url = "#evaluate($bukken_url)")
 #set($bukken_id = $bukken_base_url.replaceAll("oh.openhouse-group.com.*?\/(.*)/(.*)/(.*)\/", "$3"))
 #set($bukken_area = $bukken_base_url.replaceAll("oh.openhouse-group.com.*?\/(.*)/(.*)/(.*)\/", "$1"))
@@ -19,64 +19,6 @@ Set link from custome object data on marketo
 #end
 
 #*
-Set link macro
-*#
-
-## タイトル
-#macro(link__title_mv2 $bukken_area,$bukken_id,$utm_term)
-<a href="https://oh.openhouse-group.com/$bukken_area/bukken/$bukken_id/?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=title&utm_content=${utm_content}&utm_term=property_${title_name}_0$utm_term&banner_id=${nowData_YYYYMMDD}">
-    <p style="font-size: 16px;mso-ansi-font-size:16px;line-height: 1.4em;background-color: #FFFEF8;color:#215EAF;text-align: center;font-weight: 900;">$osusume_bukken_name</p>
-</a>
-#end
-
-## 資料請求はこちら
-#macro(link__req_btn_s_mv1 $bukken_id,$utm_term)
-<a href="https://oh.openhouse-group.com/bukken/request/?bukken_id=$bukken_id&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=req_btn_s&utm_content=${utm_content}&utm_term=property_${title_name}_0$utm_term&banner_id=${nowData_YYYYMMDD}" style="text-decoration:none;color: #215EAF;font-weight: 900; ">
-    <p class="cta_link--req" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: left;padding-right: 0.4em;mso-line-height-rule: exactly;">資料請求はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/arrow.png"></p>
-</a>
-#end
-
-## 見学予約はこちら
-#macro(link__res_btn_s_mv1 $bukken_id,$utm_term)
-<a href="https://oh.openhouse-group.com/bukken/reserve/?bukken_id=$bukken_id&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=res_btn_s&utm_content=${utm_content}&utm_term=property_${title_name}_0$utm_term&banner_id=${nowData_YYYYMMDD}" style="text-decoration:none;color: #215EAF;font-weight: 900; ">
-    <p class="cta_link--kengaku" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: right;padding-left:0.4em;mso-line-height-rule: exactly;">見学予約はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/arrow.png"></p>
-</a>
-#end
-
-## 画像
-#macro(link__image_mv1 $bukken_id,$utm_term)
-<a href="https://oh.openhouse-group.com/bukken/reserve/?bukken_id=$bukken_id&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=image&utm_content=${utm_content}&utm_term=property_${title_name}_0$utm_term&banner_id=${nowData_YYYYMMDD}">
-    <img width="100%" src="https://$osusume_bukken_img_url " style="height:auto;backface-visibility: hidden; -webkit-backface-visibility: hidden;">
-</a>
-#end
-
-## 図面を受け取る
-#macro(link__req_btn_mv1 $bukken_id,$utm_term)
-<!--[if gte mso | IE]>
-    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://oh.openhouse-group.com/bukken/request/?bukken_id=$bukken_id&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=req_btn&utm_content=${utm_content}&utm_term=property_${title_name}_0$utm_term&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
-        <w:anchorlock/>
-            <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">図面を受け取る</center>
-    </v:roundrect>
-<![endif]-->
-<!--[if !gte !mso | !IE]><!-- -->
-<a class="main_cta" href="https://oh.openhouse-group.com/bukken/request/?bukken_id=$bukken_id&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=req_btn&utm_content=${utm_content}&utm_term=property_${title_name}_0$utm_term&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:90%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">▶︎ 図面を受け取る</a>
-<!--<![endif]-->
-#end
-
-## 詳しく見る
-#macro(link__detail_btn_mv2 $bukken_area,$bukken_id,$utm_term)
-<!--[if gte mso | IE]>
-    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://oh.openhouse-group.com/$bukken_area/bukken/$bukken_id/?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=title&utm_content=${utm_content}&utm_term=property_${title_name}_0$utm_term&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#ffffff">
-        <w:anchorlock/>
-        <center style="color:#DA1A1D;font-family:sans-serif;font-size:13px;font-weight:bold;">詳しく見る</center>
-    </v:roundrect>
-<![endif]-->
-<!--[if !gte !mso | !IE]><!-- -->
-<a class="main_cta" href="https://oh.openhouse-group.com/$bukken_area/bukken/$bukken_id/?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=title&utm_content=${utm_content}&utm_term=property_${title_name}_0$utm_term&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #fff;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #DA1A1D; font-weight: bold;width:90% ;text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">▶︎ 詳しく見る</a>
-<!--<![endif]-->
-#end
-
-#*
 Set data from custome object data on marketo
 *#
 #foreach($object in $similar_to_past_req_bukkenList)
@@ -85,7 +27,7 @@ Set data from custome object data on marketo
 #*
 最初の物件名がなかったらすべてを表示させないようにする
 *#
-#set($osusume_bukken_accsess = "${esc.d}object.${title_name}_osusume_bukken_name_1")
+#set($osusume_bukken_accsess = "${esc.d}object.${title_name3}_osusume_bukken_name_1")
 #set($osusume_bukken_accsess = "#evaluate($osusume_bukken_accsess)")
 #if(!$osusume_bukken_accsess.contains('$'))
 
@@ -143,17 +85,17 @@ The parameter comented is using mytoken
     <tbody>
         <tr style="max-width:600px;width:100%">
             <td style="padding:0;">
-                <img width="100%" alt="価格でおすすめの物件" src="http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/ttl01.png">
+                <img width="100%" alt="価格でおすすめの物件" src="http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/ttl03.png">
             </td>
         </tr>
         #foreach ($i in [1..2])
 
-        #set ($osusume_bukken_accsess = "${esc.d}object.${title_name}_osusume_bukken_accsess_${i}")
-        #set ($osusume_bukken_img_url = "${esc.d}object.${title_name}_osusume_bukken_img_url_${i}")
-        #set ($osusume_bukken_name = "${esc.d}object.${title_name}_osusume_bukken_name_${i}")
-        #set ($osusume_free_catch = "${esc.d}object.${title_name}_osusume_free_catch_${i}")
-        #set ($osusume_full_address = "${esc.d}object.${title_name}_osusume_full_address_${i}")
-        #set ($osusume_price = "${esc.d}object.${title_name}_osusume_price_${i}")
+        #set ($osusume_bukken_accsess = "${esc.d}object.${title_name3}_osusume_bukken_accsess_${i}")
+        #set ($osusume_bukken_img_url = "${esc.d}object.${title_name3}_osusume_bukken_img_url_${i}")
+        #set ($osusume_bukken_name = "${esc.d}object.${title_name3}_osusume_bukken_name_${i}")
+        #set ($osusume_free_catch = "${esc.d}object.${title_name3}_osusume_free_catch_${i}")
+        #set ($osusume_full_address = "${esc.d}object.${title_name3}_osusume_full_address_${i}")
+        #set ($osusume_price = "${esc.d}object.${title_name3}_osusume_price_${i}")
 
         #set($osusume_bukken_accsess = "#evaluate($osusume_bukken_accsess)")
         #set($osusume_bukken_img_url = "#evaluate($osusume_bukken_img_url)")
@@ -181,10 +123,14 @@ The parameter comented is using mytoken
                         <tr>
                             <td>
                                 #if( $i == 1 )
-                                #link__title_mv2(${bukken_area_1},${bukken_id_1},${utm_term_1})
+                                <a href="https://oh.openhouse-group.com/${bukken_area_1}/bukken/${bukken_id_1}/?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=title&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}">
+                                    <p style="font-size: 16px;mso-ansi-font-size:16px;line-height: 1.4em;background-color: #FFFEF8;color:#215EAF;text-align: center;font-weight: 900;">$osusume_bukken_name</p>
+                                </a>
                                 #end
                                 #if( $i == 2 )
-                                #link__title_mv2(${bukken_area_2},${bukken_id_2},${utm_term_2})
+                                <a href="https://oh.openhouse-group.com/${bukken_area_2}/bukken/${bukken_id_2}/?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=title&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}">
+                                    <p style="font-size: 16px;mso-ansi-font-size:16px;line-height: 1.4em;background-color: #FFFEF8;color:#225EAF;text-align: center;font-weight: 900;">$osusume_bukken_name</p>
+                                </a>
                                 #end
                             </td>
                         </tr>
@@ -211,38 +157,66 @@ The parameter comented is using mytoken
                         <tr style="table-layout:fixed">
                             <td style="width: 50%;display: inline-table;">
                                 #if( $i == 1 )
-                                #link__req_btn_s_mv1(${bukken_id_1},${utm_term_1})
+                                <a href="https://oh.openhouse-group.com/bukken/request/?bukken_id=${bukken_id_1}&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=req_btn_s&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" style="text-decoration:none;color: #215EAF;font-weight: 900; ">
+                                    <p class="cta_link--req" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: left;padding-right: 0.4em;mso-line-height-rule: exactly;">資料請求はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/arrow.png"></p>
+                                </a>
                                 #end
                                 #if( $i == 2 )
-                                #link__req_btn_s_mv1(${bukken_id_2},${utm_term_2})
+                                <a href="https://oh.openhouse-group.com/bukken/request/?bukken_id=${bukken_id_1}&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=req_btn_s&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" style="text-decoration:none;color: #215EAF;font-weight: 900; ">
+                                    <p class="cta_link--req" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: left;padding-right: 0.4em;mso-line-height-rule: exactly;">資料請求はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/arrow.png"></p>
+                                </a>
                                 #end
                             </td>
                             <td style="width: 50%;display: inline-table;">
                                 #if( $i == 1 )
-                                #link__res_btn_s_mv1(${bukken_id_1},${utm_term_1})
+                                <a href="https://oh.openhouse-group.com/bukken/reserve/?bukken_id=${bukken_id_1}&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=res_btn_s&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" style="text-decoration:none;color: #215EAF;font-weight: 900; ">
+                                    <p class="cta_link--kengaku" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: right;padding-left:0.4em;mso-line-height-rule: exactly;">見学予約はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/arrow.png"></p>
+                                </a>
                                 #end
                                 #if( $i == 2 )
-                                #link__res_btn_s_mv1(${bukken_id_2},${utm_term_2})
+                                <a href="https://oh.openhouse-group.com/bukken/reserve/?bukken_id=${bukken_id_2}&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=res_btn_s&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}" style="text-decoration:none;color: #215EAF;font-weight: 900; ">
+                                    <p class="cta_link--kengaku" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: right;padding-left:0.4em;mso-line-height-rule: exactly;">見学予約はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/arrow.png"></p>
+                                </a>
                                 #end
                             </td>
                         </tr>
                         <tr>
                             <td style="padding:10px;width:100%;">
                                 #if( $i == 1 )
-                                #link__image_mv1(${bukken_id_1},${utm_term_1})
+                                <a href="https://oh.openhouse-group.com/${bukken_area_1}/bukken/${bukken_id_1}/?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=image&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}">
+                                    <img width="100%" src="https://$osusume_bukken_img_url" style="height:auto;backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+                                </a>
                                 #end
                                 #if( $i == 2 )
-                                #link__image_mv1(${bukken_id_2},${utm_term_2})
+                                <a href="https://oh.openhouse-group.com/${bukken_area_2}/bukken/${bukken_id_2}/?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=image&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}">
+                                    <img width="100%" src="https://$osusume_bukken_img_url" style="height:auto;backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+                                </a>
                                 #end
                             </td>
                         </tr>
                         <tr>
                             <td align="center" style="border-radius: 5px;">
                                 #if( $i == 1 )
-                                #link__req_btn_mv1(${bukken_id_1},${utm_term_1})
+                                <!--[if gte mso | IE]>
+                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://oh.openhouse-group.com/bukken/request/?bukken_id=${bukken_id_1}&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=req_btn&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                        <w:anchorlock/>
+                        <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">図面を受け取る</center>
+                    </v:roundrect>
+                    <![endif]-->
+                                <!--[if !gte !mso | !IE]><!-- -->
+                                <a class="main_cta" href="https://oh.openhouse-group.com/bukken/request/?bukken_id=${bukken_id_1}&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=req_btn&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:90%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">▶︎ 図面を受け取る</a>
+                                <!--<![endif]-->
                                 #end
                                 #if( $i == 2 )
-                                #link__req_btn_mv1(${bukken_id_2},${utm_term_2})
+                                <!--[if gte mso | IE]>
+                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://oh.openhouse-group.com/bukken/request/?bukken_id=${bukken_id_2}&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=req_btn&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                        <w:anchorlock/>
+                        <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">図面を受け取る</center>
+                    </v:roundrect>
+                    <![endif]-->
+                                <!--[if !gte !mso | !IE]><!-- -->
+                                <a class="main_cta" href="https://oh.openhouse-group.com/bukken/request/?bukken_id=${bukken_id_2}&staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=req_btn&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:90%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">▶︎ 図面を受け取る</a>
+                                <!--<![endif]-->
                                 #end
                             </td>
                         </tr>
@@ -260,10 +234,26 @@ The parameter comented is using mytoken
                         <tr>
                             <td align="center" style="border-radius: 5px">
                                 #if( $i == 1 )
-                                #link__detail_btn_mv2($bukken_area_1,$bukken_id_1,$utm_term_1)
+                                <!--[if gte mso | IE]>
+                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://oh.openhouse-group.com/${bukken_area_1}/bukken/${bukken_id_1}/?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=detail_btn&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#ffffff">
+                        <w:anchorlock/>
+                        <center style="color:#DA1A1D;font-family:sans-serif;font-size:13px;font-weight:bold;">詳しく見る</center>
+                    </v:roundrect>
+                    <![endif]-->
+                                <!--[if !gte !mso | !IE]><!-- -->
+                                <a class="main_cta" href="https://oh.openhouse-group.com/${bukken_area_1}/bukken/${bukken_id_1}/?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=detail_btn&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #fff;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #DA1A1D; font-weight: bold;width:90% ;text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">▶︎ 詳しく見る</a>
+                                <!--<![endif]-->
                                 #end
                                 #if( $i == 2 )
-                                #link__detail_btn_mv2($bukken_area_2,$bukken_id_2,$utm_term_2)
+                                <!--[if gte mso | IE]>
+                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://oh.openhouse-group.com/${bukken_area_2}/bukken/${bukken_id_2}/?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=detail_btn&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#ffffff">
+                        <w:anchorlock/>
+                        <center style="color:#DA1A1D;font-family:sans-serif;font-size:13px;font-weight:bold;">詳しく見る</center>
+                    </v:roundrect>
+                    <![endif]-->
+                                <!--[if !gte !mso | !IE]><!-- -->
+                                <a class="main_cta" href="https://oh.openhouse-group.com/${bukken_area_2}/bukken/${bukken_id_2}/?staff_id=${lead.userEmailAccountName}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=detail_btn&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #fff;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #DA1A1D; font-weight: bold;width:90% ;text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">▶︎ 詳しく見る</a>
+                                <!--<![endif]-->
                                 #end
                             </td>
                         </tr>
