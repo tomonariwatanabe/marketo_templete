@@ -1,51 +1,66 @@
 #*
+Build utm_parameter
+The parameter comented is using mytoken
+*#
+
+#set($utm_campaign = "mkt_other")
+#set($utm_medium = "mkt_dy_mail")
+#set($utm_content = "browsing_bukken_ranking")
+
+
+#*
 Add multiple array using an image link on marketo image
 *#
 #set( $bukken_ranking_img =
 [{
-"ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1.png",
-"ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1_line.png",
+"ranking_crown_img_url":"{%image.01_rank_crown_2202%}",
+"ranking_line_img_url":"{%image.dotted_line_gold_2202%}",
 "ranking_border_line_color":"#e5c464",
-"line_title":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1_little_title.png",
-"station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1_station_title.png"
+"line_title":"{%image.railwey_name_gold_2202%}",
+"station_title":"{%image.station_name_gold_2202%}"
 },{
-"ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/2.png",
-"ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/2_line.png",
+"ranking_crown_img_url":"{%image.02_rank_crown_2202%}",
+"ranking_line_img_url":"{%image.dotted_line_silver_2202%}",
 "ranking_border_line_color":"#B2B2B2",
-"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/2_little_title.png",
-"station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/2_station_title.png"
+"line_title":"{%image.railwey_name_silver_2202%}",
+"station_title":"{%image.station_name_silver_2202%}"
 },{
-"ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/3.png",
-"ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/3_line.png",
+"ranking_crown_img_url":"{%image.03_rank_crown_2202%}",
+"ranking_line_img_url":"{%image.dotted_line_bronze_2202%}",
 "ranking_border_line_color":"#A07668",
-"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/3_little_title.png",
-"station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/3_station_title.png"
+"line_title":"{%image.railwey_name_bronze_2202%}",
+"station_title":"{%image.station_name_bronze_2202%}"
 },{
-"ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/4.png",
-"ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/4_line.png",
+"ranking_crown_img_url":"{%image.04_rank_crown_2202%}",
+"ranking_line_img_url":"{%image.dotted_line_base_2202%}",
 "ranking_border_line_color":"#7C96B1",
-"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_little_title.png",
-"station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_station_title.png"
+"line_title":"{%image.railwey_name_base_2202%}",
+"station_title":"{%image.station_name_base_2202%}"
 },{
-"ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/5.png",
-"ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/5_line.png",
+"ranking_crown_img_url":"{%image.05_rank_crown_2202%}",
+"ranking_line_img_url":"{%image.dotted_line_base_2202%}",
 "ranking_border_line_color":"#7C96B1",
-"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_little_title.png",
-"station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_station_title.png"
+"line_title":"{%image.railwey_name_base_2202%}",
+"station_title":"{%image.station_name_base_2202%}"
 },{
-"ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/6.png",
-"ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/6_line.png",
+"ranking_crown_img_url":"{%image.06_rank_crown_2202%}",
+"ranking_line_img_url":"{%image.dotted_line_base_2202%}",
 "ranking_border_line_color":"#7C96B1",
-"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_little_title.png",
-"station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_station_title.png"
+"line_title":"{%image.railwey_name_base_2202%}",
+"station_title":"{%image.station_name_base_2202%}"
 },{
-"ranking_crown_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/7.png",
-"ranking_line_img_url":"https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/7_line.png",
+"ranking_crown_img_url":"{%image.07_rank_crown_2202%}",
+"ranking_line_img_url":"{%image.dotted_line_base_2202%}",
 "ranking_border_line_color":"#7C96B1",
-"line_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_little_title.png",
-"station_title":"http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/0_station_title.png"
+"line_title":"{%image.railwey_name_base_2202%}",
+"station_title":"{%image.station_name_base_2202%}"
 }])
 
+#if($lead.userEmailAccountName.length() > 0)
+#set($staff_id_param = "&staff_id=${lead.userEmailAccountName}")
+#else
+#set($staff_id_param = "")
+#end
 
 #*
 Set link from custome object data on marketo
@@ -54,12 +69,24 @@ Set link from custome object data on marketo
 #if($object.mail_key.contains('ensen_eki_browsing_ranking_in_7days'))
 #foreach ($i in [1..7])
 
+#set( $defaultTimeZone = $date.getTimeZone().getTimeZone("Asia/Tokyo") )
+#set( $defaultLocale = $date.getLocale() )
+#set( $calNow = $date.getCalendar() )
+#set( $ret = $calNow.setTimeZone($defaultTimeZone) )
+#set( $calConst = $field.in($calNow) )
+#set( $ISO8601DateOnly = "yyyy-MM-dd" )
+#set( $nowData_YYYYMMDD = $date.format($ISO8601DateOnly,$calNow,$defaultLocale,$defaultTimeZone) )
+#set($y = ${convert.parseDate($nowData_YYYYMMDD, 'yyyy-MM-dd')})
+#set($x = ${convert.parseDate($object.effect_date, 'yyyy-MM-dd')})
+
+#if($date.whenIs($x,$y).days == 0)
 #set ($eki_search_url= "${esc.d}object.eki_search_url_${i}")
 #set ($ensen_search_url= "${esc.d}object.ensen_search_url_${i}")
 
 #evaluate( "${esc.h}set( ${esc.d}$eki_search_url_${i} = ${esc.d}$eki_search_url )" )
 #evaluate( "${esc.h}set( ${esc.d}$ensen_search_url_${i} = ${esc.d}$ensen_search_url)" )
 #evaluate( "${esc.h}set( ${esc.d}utm_term_${i} = ${esc.d}i )" )
+#end
 #end
 #end
 #end
@@ -87,48 +114,19 @@ Set data from custome object data on marketo
 #set($line_title = $bukken_ranking_img[$j].line_title)
 #set($station_title = $bukken_ranking_img[$j].station_title)
 
-
-#*
-Build utm_parameter
-The parameter comented is using mytoken
-*#
-#if(${object.area_name}=="全国")
-#set($utm_campaign = "mkt_all_area")
-#elseif(${object.area_name}=="関東")
-#set($utm_campaign = "mkt_kanto")
-#elseif(${object.area_name}=="関西")
-#set($utm_campaign = "mkt_kansai")
-#elseif(${object.area_name}=="東京")
-#set($utm_campaign = "mkt_tokyo")
-#elseif(${object.area_name}=="神奈川")
-#set($utm_campaign = "mkt_kanagawa")
-#elseif(${object.area_name}=="千葉")
-#set($utm_campaign = "mkt_chiba")
-#elseif(${object.area_name}=="埼玉")
-#set($utm_campaign = "mkt_saitama")
-#elseif(${object.area_name}=="愛知")
-#set($utm_campaign = "mkt_aichi")
-#elseif(${object.area_name}=="大阪")
-#set($utm_campaign = "mkt_osaka")
-#elseif(${object.area_name}=="福岡")
-#set($utm_campaign = "mkt_fukuoka")
-#else
-#set($utm_campaign = "mkt_other")
-#end
-
-#set($utm_medium = "mkt_dy_mail")
-#set($utm_content = "browsing_bukken_ranking")
-
 #set( $defaultTimeZone = $date.getTimeZone().getTimeZone("Asia/Tokyo") )
 #set( $defaultLocale = $date.getLocale() )
 #set( $calNow = $date.getCalendar() )
 #set( $ret = $calNow.setTimeZone($defaultTimeZone) )
 #set( $calConst = $field.in($calNow) )
-#set( $ISO8601DateOnly = "yyyyMMdd" )
+#set( $ISO8601DateOnly = "yyyy-MM-dd" )
+#set( $yyyymmdd = "yyyyMMdd" )
 #set( $nowData_YYYYMMDD = $date.format($ISO8601DateOnly,$calNow,$defaultLocale,$defaultTimeZone) )
+#set( $banner_id = $date.format($yyyymmdd,$calNow,$defaultLocale,$defaultTimeZone) )
+#set($y = ${convert.parseDate($nowData_YYYYMMDD, 'yyyy-MM-dd')})
+#set($x = ${convert.parseDate($object.effect_date, 'yyyy-MM-dd')})
 
-
-
+#if($date.whenIs($x,$y).days == 0)
 <!-- START ランキング -->
 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
 <table cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#fbf8eb;padding:0 11%">
@@ -172,91 +170,91 @@ The parameter comented is using mytoken
                                 #if( $i == 1 )
                                 <p style="margin:0;padding-bottom: 1.5em;background-color: #FFFFFF;border-left: solid 1px $ranking_border_line_color ;border-right: solid 1px $ranking_border_line_color;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_1}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_1}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_1}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                     <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${ensen_search_url_1}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${ensen_search_url_1}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_1}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 2 )
                                 <p style="margin:0;padding-bottom: 1.5em;background-color: #FFFFFF;border-left: solid 1px $ranking_border_line_color ;border-right: solid 1px $ranking_border_line_color;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_2}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_2}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_2}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                     <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${ensen_search_url_2}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${ensen_search_url_2}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_2}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 3 )
                                 <p style="margin:0;padding-bottom: 1.5em;background-color: #FFFFFF;border-left: solid 1px $ranking_border_line_color ;border-right: solid 1px $ranking_border_line_color;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_3}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_3}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_3}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_3}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                     <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${ensen_search_url_3}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_3}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${ensen_search_url_3}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_3}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 4 )
                                 <p style="margin:0;padding-bottom: 1.5em;background-color: #FFFFFF;border-left: solid 1px $ranking_border_line_color ;border-right: solid 1px $ranking_border_line_color;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_4}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_4}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_4}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_4}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                     <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${ensen_search_url_4}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_4}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${ensen_search_url_4}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_4}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 5 )
                                 <p style="margin:0;padding-bottom: 1.5em;background-color: #FFFFFF;border-left: solid 1px $ranking_border_line_color ;border-right: solid 1px $ranking_border_line_color;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_5}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_5}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_5}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_5}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                     <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${ensen_search_url_5}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_5}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${ensen_search_url_5}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_5}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 6 )
                                 <p style="margin:0;padding-bottom: 1.5em;background-color: #FFFFFF;border-left: solid 1px $ranking_border_line_color ;border-right: solid 1px $ranking_border_line_color;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_6}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_6}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_6}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_6}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                     <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${ensen_search_url_6}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_6}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${ensen_search_url_6}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_6}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 7 )
                                 <p style="margin:0;padding-bottom: 1.5em;background-color: #FFFFFF;border-left: solid 1px $ranking_border_line_color ;border-right: solid 1px $ranking_border_line_color;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_7}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_7}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${ensen_search_url_7}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_7}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                     <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${ensen_search_url_7}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_7}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${ensen_search_url_7}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=line_0${utm_term_7}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
@@ -280,91 +278,91 @@ The parameter comented is using mytoken
                                 #if( $i == 1 )
                                 <p style="margin:0;padding-bottom: 1.5em;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_1}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_1}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_1}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                 <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${eki_search_url_1}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${eki_search_url_1}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_1}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 2 )
                                 <p style="margin:0;padding-bottom: 1.5em;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_2}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_2}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_2}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                 <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${eki_search_url_2}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${eki_search_url_2}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_2}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 3 )
                                 <p style="margin:0;padding-bottom: 1.5em;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_3}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_3}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_3}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_3}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                 <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${eki_search_url_3}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_3}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${eki_search_url_3}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_3}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 4 )
                                 <p style="margin:0;padding-bottom: 1.5em;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_4}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_4}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_4}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_4}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                 <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${eki_search_url_4}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_4}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${eki_search_url_4}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_4}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 5 )
                                 <p style="margin:0;padding-bottom: 1.5em;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_5}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_5}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_5}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_5}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                 <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${eki_search_url_5}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_5}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${eki_search_url_5}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_5}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 6 )
                                 <p style="margin:0;padding-bottom: 1.5em;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_6}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_6}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_6}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_6}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                 <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${eki_search_url_6}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_6}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${eki_search_url_6}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_6}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
                                 #if( $i == 7 )
                                 <p style="margin:0;padding-bottom: 1.5em;box-sizing: border-box;">
                                     <!--[if gte mso | IE]>
-                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_7}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_7}&banner_id=${nowData_YYYYMMDD}" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
+                                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://${eki_search_url_7}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_7}&banner_id=${banner_id}$staff_id_param" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
                                         <w:anchorlock/>
                                         <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">物件を見る ＞</center>
                                     </v:roundrect>
                                 <![endif]-->
                                     <!--[if !gte !mso | !IE]><!-- -->
-                                    <a class="main_cta_min" href="https://${eki_search_url_7}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_7}&banner_id=${nowData_YYYYMMDD}" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
+                                    <a class="main_cta_min" href="https://${eki_search_url_7}&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=red_btn_ensen&utm_content=${utm_content}&utm_term=station_0${utm_term_7}&banner_id=${banner_id}$staff_id_param" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
                                     <!--<![endif]-->
                                 </p>
                                 #end
@@ -387,6 +385,7 @@ The parameter comented is using mytoken
 </table>
 <!--[if mso | IE]></table><![endif]-->
 <!-- END ランキング -->
+#end
 #end
 #end
 #end

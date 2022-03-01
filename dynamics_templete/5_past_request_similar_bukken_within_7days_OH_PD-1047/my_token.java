@@ -1,10 +1,29 @@
 #set($title_name3 = "municipality_id")
 
 #*
+Build utm_parameter
+The parameter comented is using mytoken
+*#
+#set($utm_campaign = "mkt_other")
+#set($utm_medium = "mkt_dy_mail")
+#set($utm_content = "past_request_similar_bukken_within_90days")
+
+#set( $defaultTimeZone = $date.getTimeZone().getTimeZone("Asia/Tokyo") )
+#set( $defaultLocale = $date.getLocale() )
+#set( $calNow = $date.getCalendar() )
+#set( $ret = $calNow.setTimeZone($defaultTimeZone) )
+#set( $calConst = $field.in($calNow) )
+#set( $ISO8601DateOnly = "yyyy-MM-dd" )
+#set( $nowData_YYYYMMDD = $date.format($ISO8601DateOnly,$calNow,$defaultLocale,$defaultTimeZone) )
+#set($y = ${convert.parseDate($nowData_YYYYMMDD, 'yyyy-MM-dd')})
+
+#*
 Set link from custome object data on marketo
 *#
 #foreach($object in $similar_to_past_req_bukkenList)
 #if($object.mail_key.contains('past_request_similar_bukken_in_90days'))
+#set($x = ${convert.parseDate($object.effect_date, 'yyyy-MM-dd')})
+#if($date.whenIs($x,$y).days == 0)
 #foreach ($i in [1..2])
 #set ($bukken_url = "${esc.d}object.${title_name3}_osusume_bukken_url_${i}")
 #set($bukken_base_url = "#evaluate($bukken_url)")
@@ -17,12 +36,13 @@ Set link from custome object data on marketo
 #end
 #end
 #end
+#end
 
 #*
 Set staff_id Parameter
 *#
 #if($lead.userEmailAccountName.length() > 0)
-#set($staff_id_param = "$staff_id_param")
+#set($staff_id_param = "&staff_id=${lead.userEmailAccountName}")
 #else
 #set($staff_id_param = "")
 #end
@@ -33,43 +53,9 @@ Set data from custome object data on marketo
 #foreach($object in $similar_to_past_req_bukkenList)
 #if($object.mail_key.contains('past_request_similar_bukken_in_90days'))
 
-#*
-最初の物件名がなかったらすべてを表示させないようにする
-*#
-#set($osusume_bukken_accsess = "${esc.d}object.${title_name3}_osusume_bukken_name_1")
-#set($osusume_bukken_accsess = "#evaluate($osusume_bukken_accsess)")
-#if(!$osusume_bukken_accsess.contains('$'))
+#set($x = ${convert.parseDate($object.effect_date, 'yyyy-MM-dd')})
+#if($date.whenIs($x,$y).days == 0)
 
-#*
-Build utm_parameter
-The parameter comented is using mytoken
-*#
-#if(${object.area_name}=="全国")
-#set($utm_campaign = "mkt_all_area")
-#elseif(${object.area_name}=="関東")
-#set($utm_campaign = "mkt_kanto")
-#elseif(${object.area_name}=="関西")
-#set($utm_campaign = "mkt_kansai")
-#elseif(${object.area_name}=="東京")
-#set($utm_campaign = "mkt_tokyo")
-#elseif(${object.area_name}=="神奈川")
-#set($utm_campaign = "mkt_kanagawa")
-#elseif(${object.area_name}=="千葉")
-#set($utm_campaign = "mkt_chiba")
-#elseif(${object.area_name}=="埼玉")
-#set($utm_campaign = "mkt_saitama")
-#elseif(${object.area_name}=="愛知")
-#set($utm_campaign = "mkt_aichi")
-#elseif(${object.area_name}=="大阪")
-#set($utm_campaign = "mkt_osaka")
-#elseif(${object.area_name}=="福岡")
-#set($utm_campaign = "mkt_fukuoka")
-#else
-#set($utm_campaign = "mkt_other")
-#end
-
-#set($utm_medium = "mkt_dy_mail")
-#set($utm_content = "past_request_similar_bukken_within_90days")
 
 #set( $defaultTimeZone = $date.getTimeZone().getTimeZone("Asia/Tokyo") )
 #set( $defaultLocale = $date.getLocale() )
@@ -94,7 +80,7 @@ The parameter comented is using mytoken
     <tbody>
         <tr style="max-width:600px;width:100%">
             <td style="padding:0;">
-                <img width="100%" alt="価格でおすすめの物件" src="http://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/ttl03.png">
+                <img width="100%" alt="住所でおすすめの物件" src="{%image.recommend_address_2202%}">
             </td>
         </tr>
         #foreach ($i in [1..2])
@@ -150,7 +136,7 @@ The parameter comented is using mytoken
                         </tr>
                         <tr width="100">
                             <td>
-                                <img width="100%" style="margin:0 auto;display: block;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1_line.png">
+                                <img width="100%" style="margin:0 auto;display: block;" src="{%image.dotted_line_gold_2202%}">
                             </td>
                         </tr>
                         <tr>
@@ -160,31 +146,31 @@ The parameter comented is using mytoken
                         </tr>
                         <tr width="100">
                             <td>
-                                <img width="100%" style="margin:0 auto;display: block;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1_line.png">
+                                <img width="100%" style="margin:0 auto;display: block;" src="{%image.dotted_line_gold_2202%}">
                             </td>
                         </tr>
                         <tr style="table-layout:fixed">
                             <td style="width: 50%;display: inline-table;">
                                 #if( $i == 1 )
                                 <a href="https://oh.openhouse-group.com/bukken/request/?bukken_id=${bukken_id_1}$staff_id_param&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=req_btn_s&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" style="text-decoration:none;color: #215EAF;font-weight: 900; ">
-                                    <p class="cta_link--req" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: left;padding-right: 0.4em;mso-line-height-rule: exactly;">資料請求はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/arrow.png"></p>
+                                    <p class="cta_link--req" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: left;padding-right: 0.4em;mso-line-height-rule: exactly;">資料請求はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="{%image.blue_arrow_right_2202%}"></p>
                                 </a>
                                 #end
                                 #if( $i == 2 )
                                 <a href="https://oh.openhouse-group.com/bukken/request/?bukken_id=${bukken_id_1}$staff_id_param&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=req_btn_s&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" style="text-decoration:none;color: #215EAF;font-weight: 900; ">
-                                    <p class="cta_link--req" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: left;padding-right: 0.4em;mso-line-height-rule: exactly;">資料請求はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/arrow.png"></p>
+                                    <p class="cta_link--req" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: left;padding-right: 0.4em;mso-line-height-rule: exactly;">資料請求はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="{%image.blue_arrow_right_2202%}"></p>
                                 </a>
                                 #end
                             </td>
                             <td style="width: 50%;display: inline-table;">
                                 #if( $i == 1 )
                                 <a href="https://oh.openhouse-group.com/bukken/reserve/?bukken_id=${bukken_id_1}$staff_id_param&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=res_btn_s&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_1}&banner_id=${nowData_YYYYMMDD}" style="text-decoration:none;color: #215EAF;font-weight: 900; ">
-                                    <p class="cta_link--kengaku" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: right;padding-left:0.4em;mso-line-height-rule: exactly;">見学予約はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/arrow.png"></p>
+                                    <p class="cta_link--kengaku" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: right;padding-left:0.4em;mso-line-height-rule: exactly;">見学予約はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="{%image.blue_arrow_right_2202%}"></p>
                                 </a>
                                 #end
                                 #if( $i == 2 )
                                 <a href="https://oh.openhouse-group.com/bukken/reserve/?bukken_id=${bukken_id_2}$staff_id_param&utm_campaign=${utm_campaign}&utm_medium=${utm_medium}&utm_source=res_btn_s&utm_content=${utm_content}&utm_term=property_${title_name3}_0${utm_term_2}&banner_id=${nowData_YYYYMMDD}" style="text-decoration:none;color: #215EAF;font-weight: 900; ">
-                                    <p class="cta_link--kengaku" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: right;padding-left:0.4em;mso-line-height-rule: exactly;">見学予約はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/arrow.png"></p>
+                                    <p class="cta_link--kengaku" style="font-size: 0.8em;mso-ansi-font-size:0.8em;text-align: right;padding-left:0.4em;mso-line-height-rule: exactly;">見学予約はこちら&nbsp;<img style="vertical-align: middle;height:14px;min-height: 14px;max-height: 14px;vertical-align: text-bottom;" src="{%image.blue_arrow_right_2202%}"></p>
                                 </a>
                                 #end
                             </td>

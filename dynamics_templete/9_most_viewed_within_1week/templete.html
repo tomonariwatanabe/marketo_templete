@@ -14,7 +14,7 @@
 
     <!--___________________ Marketo Variable Definitions ___________________-->
     <meta class="mktoNumber" id="GlobalWidth" mktoname="メールの横幅" default="600" min="1" max="1000" units="px" step="1" mktomodulescope="false" />
-    <meta class="mktoColor" id="GlobalBackgroundColor" mktoname="Global Back Ground Color" default="#FFFEF8" mktomodulescope="false" />
+    <meta class="mktoColor" id="GlobalBackgroundColor" mktoname="Global Back Ground Color" default="#ffffff" mktomodulescope="false" />
     <meta class="mktoColor" id="GlobalExternalBackgroundColor" mktoname="Global External Back Ground Color" default="#f2f2f2" mktomodulescope="false" />
     <meta class="mktoList" id="mkto-masthead-alignment" mktoname="Masthead Alignment" values="left,center,right" mktomodulescope="true" default="left" />
     <meta class="mktoList" id="mkto-masthead-alignment-center" mktoname="Masthead Alignment center" values="left,center,right" mktomodulescope="true" default="center" />
@@ -38,6 +38,10 @@
     <meta class="mktoString" id="utm_content" mktoname="utm_content" default="{{my.utm_content}}" />
     <meta class="mktoString" id="utm_medium" mktoname="utm_medium" default="{{my.utm_medium}}" />
     <meta class="mktoString" id="banner_id" mktoname="banner_id" default="{{my.banner_id}}" />
+
+
+
+    <!-- Custome styles for this templete -->
     <style>
         h1 a:active {
             color: red !important
@@ -262,19 +266,21 @@
                 pointer-events: auto;
                 cursor: default;
             }
+
+            .main_table {
+                width: 90% !important;
+            }
         }
 
         @media only screen and (min-width: 760px) {
-            p {
+
+
+            .cta_link--req {
                 font-size: 20px !important;
             }
 
-            .cta_link--req {
-                font-size: 22px !important;
-            }
-
             .cta_link--kengaku {
-                font-size: 22px !important;
+                font-size: 20px !important;
             }
 
             .cta_link--req img {
@@ -289,22 +295,40 @@
 
             .main_cta {
                 font-size: 25px !important;
-                padding: 30px 0 !important;
+                padding: 25px 0 !important;
             }
 
-            /* 追加 */
-            .main_cta_min {
-                font-size: 18px !important;
-                padding: 20px 0 !important;
+            .address {
+                font-size: 19px !important;
+            }
+
+            .title {
+                font-size: 23px !important;
+
+            }
+
+            .title>p {
+                margin-top: 15px !important;
+            }
+
+            .space_14 {
+                height: 20px !important;
+            }
+
+            .space_8 {
+                height: 15px !important;
+            }
+
+            #moduleSpace3,
+            moduleSpace4 {
+                height: 20px !important;
             }
         }
 
         @media only screen and (min-width: 480px) and (max-width: 760px) {
 
             /*starttablet*/
-            p {
-                font-size: 20px !important;
-            }
+
 
             .cta_link--req {
                 font-size: 20px !important;
@@ -344,20 +368,13 @@
                 padding: 24px 0 !important;
             }
 
-            /* 追加 */
-            .main_cta_min {
-                font-size: 18px !important;
-                padding: 20px 0 !important;
-            }
-
-
             /*endtablet*/
 
         }
     </style>
 </head>
 
-<body style="width:100%;margin:0;padding:0!important;background-color:#f2f2f2;box-sizing: border-box;text-align: justify;text-justify: inter-ideograph;-webkit-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-size-adjust: 100%">
+<body style="width:100%;margin:0;padding:0!important;background-color:${GlobalExternalBackgroundColor};box-sizing: border-box;text-align: justify;text-justify: inter-ideograph;-webkit-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-size-adjust: 100%">
     <p style="margin:1em 0;"></p>
     <!--[if mso]>
         <style type="text/css">
@@ -388,55 +405,59 @@
         </style>
         <![endif]-->
     <p></p>
+    <!--start preheader-->
     <div class="preheader mktoText" style="display:none !important; visibility:hidden; opacity:0; color:transparent; height:0; width:0;" id="preheader" mktoname="Preheader Text">ここに</div>
+    <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <!--end preheader-->
     <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><![endif]-->
-    <table cellpadding="0" cellspacing="0" border="0" align="center" 　id="backgroundTable " style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:#f2f2f2;margin:0 auto;padding:0;width:100% !important;line-height:100% !important;max-width:600px;margin: auto;;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+    <table cellpadding="0" cellspacing="0" border="0" align="center" 　id="backgroundTable" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:white;margin:0 auto;padding:0;width:100% !important;line-height:100% !important;max-width:${GlobalWidth};margin: auto;;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
         <tbody>
             <tr>
                 <td>
-                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                    <table align="center" cellspacing="0" cellpadding="0" border="0" width="100% " style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#f2f2f2;">
-                        <tbody>
-                            <tr>
-                                <td bgcolor="#fff" style="background-color: #ffffff; font-size: 15px;">
-                                    <img src="https://oh.openhouse-group.com/sp/mail/dmail/img/header_logo.jpg" width="600" height="" alt="OPEN HOUSE" border="0" style="width: 100%; max-width:600px; height: auto; background: #fff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block; border: none;" class="CToWUd" />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--[if mso | IE]></table><![endif]-->
+                    <div class="mktoSnippet" id="snipetheader_logo" mktoname="ヘッダーのロゴ" mktoDefaultSnippetId="{%snippet.header_logo_catchphrase%}" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth}px;margin:0 auto;background-color:${GlobalBackgroundColor};">
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td valign="top" class="mktoContainer" id="mkto-container" style="border-collapse:collapse;">
                     <!-- START 空白１-->
                     <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                    <table cellspacing="0" cellpadding="12px" border="0" width="100%" class="mktoModule" id="moduleSpace2" mktoName="空白2" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#FFFEF8;">
+                    <table class="mktoModule" cellpadding="0" cellspacing="0" bgcolor="${spacerBackgroundColor}" border="0" align="center" id="spacer" width="100%" mktoname="Blank Space" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;max-width:${GlobalWidth};margin:0 auto;background-color:${spacerBackgroundColor};">
                         <tbody>
                             <tr>
-                                <td>
+                                <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;">
+                                    <table class="table600" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse; margin-top: 0; margin-right: auto; margin-bottom: 0; margin-left: auto;" align="center" border="0" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;line-height:${spacerSpacer};font-size:${spacerSpacer};" height="${spacerSpacer}">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <!--[if mso | IE]></table><![endif]-->
                     <!-- END 空白１ -->
+
                     <!-- START タイトルH1 -->
                     <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                    <table cellpadding="3" cellspacing="0" border="0" bgcolor="#ffffff" align="center" class="mktoModule title_h1" id="moduleTextTitle_lrred" mktoName="タイトル_赤装飾" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#ffffff;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
+                    <table class="title_h1" cellpadding="3" cellspacing="0" border="0" bgcolor="${TextTitle_lrred__BackgroundColor}" align="center" class="mktoModule" id="moduleTextTitle_lrred" mktoName="タイトル_赤装飾" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;background-color:${TextTitle_lrred__BackgroundColor};font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
                         <tbody>
-                            <!--[if !gte !mso | !IE]><![endif]-->
+                            <!--[if !gte !mso | !IE]><!-- -->
                             <tr>
                                 <td>
-                                    <ul style="list-style: none; text-align: center;background-color: #ffffff;margin: 0;padding: 0;width: 100%;max-width:600px;">
-                                        <li style="display: inline-table;height: 20px;vertical-align:text-bottom;">
-                                            <img src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/ranking_left.png" alt="" style="vertical-align: middle;height:100%;max-height: 20px;">
+                                    <ul style="list-style: none; text-align: center;background-color: ${TextTitle_lrred__BackgroundColor};margin: 0;padding: 0;width: 100%;max-width:${GlobalWidth};">
+                                        <li style="display: inline-table;height: ${TextTitle_lrred__FontSize};vertical-align:text-bottom;">
+                                            <img src="{%image.brilliant_left_2202%}" alt="" style="vertical-align: middle;height:100%;max-height: ${TextTitle_lrred__FontSize};">
                                         </li>
-                                        <li style="display: inline-table;margin:0 0.1em;text-align: center;font-size: 20px;">
-                                            <p style="font-size: 20px;line-height:1.5em;font-weight:700;mso-ansi-font-weight:700;color:#DA1A1D">駅・沿線ランキング</p>
+                                        <li style="display: inline-table;margin:0 0.1em;text-align: center;font-size: ${TextTitle_lrred__FontSize};">
+                                            <p style="font-size: ${TextTitle_lrred__FontSize};line-height:1.5em;font-weight:700;mso-ansi-font-weight:700;color:#DA1A1D">最近繰り返し閲覧した物件</p>
                                         </li>
-                                        <li style="display: inline-table;height: 20px;vertical-align:text-bottom;">
-                                            <img src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/ranking_right.png" alt="" style="vertical-align: middle;height:100%;max-height: 20px">
+                                        <li style="display: inline-table;height: ${TextTitle_lrred__FontSize};vertical-align:text-bottom;">
+                                            <img src="{%image.brilliant_right_2202%}" alt="" style="vertical-align: middle;height:100%;max-height: ${TextTitle_lrred__FontSize}">
                                         </li>
                                     </ul>
                                 </td>
@@ -445,16 +466,16 @@
 
                             <!--[if gte mso | IE]>
                                         <tr>
-                                        <td width="100%" height="20px" border="0" cellpadding="0" cellspacing="0" style="width: 100%;height: 20px;border: none;margin: 0;">
+                                        <td width="100%" height="${TextTitle_lrred__FontSize}" border="0" cellpadding="0" cellspacing="0" style="width: 100%;height: ${TextTitle_lrred__FontSize};border: none;margin: 0;">
                                          </td>
                                         </tr>
                                         <tr>
                                          <td>
-                                             <p style="font-size: 20px;mso-ansi-font-size:20px;line-height:1.5em;font-weight:700;mso-ansi-font-weight:700;color:#DA1A1D">駅・沿線ランキング</p>
+                                             <p style="font-size: ${TextTitle_lrred__FontSize};mso-ansi-font-size:${TextTitle_lrred__FontSize};line-height:1.5em;font-weight:700;mso-ansi-font-weight:700;color:#DA1A1D">最近繰り返し閲覧した物件</p>
                                          </td>
                                         </tr>
                                         <tr>
-                                        <td width="100%" height="20px" border="0" cellpadding="0" cellspacing="0" style="width: 100%;height: 20px;border: none;margin: 0;">
+                                        <td width="100%" height="${TextTitle_lrred__FontSize}" border="0" cellpadding="0" cellspacing="0" style="width: 100%;height: ${TextTitle_lrred__FontSize};border: none;margin: 0;">
                                          </td>
                                         </tr>
                                     <![endif]-->
@@ -464,21 +485,20 @@
                     <!-- END タイトルH1 -->
                     <!-- START タイトルH1 -->
                     <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                    <table cellpadding="0" cellspacing="0" border="0" align="center" class="mktoModule" id="moduleTextSentence_Bold" mktoName="タイトル下_テキスト" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#FFFEF8;">
+                    <table cellpadding="0" cellspacing="0" border="0" align="${mkto-masthead-alignment-center}" class="mktoModule" id="moduleTextSentence_Bold" mktoName="タイトル下_テキスト" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;background-color:${GlobalBackgroundColor};">
                         <tbody>
                             <tr>
                                 <td>
-                                    <p style="font-size: 14px;mso-ansi-font-size:14px;font-weight: 500;line-height: 1.4em;background-color: white;width:80%;margin:auto;color:#000000">弊社WEBサイトにて多くの方にご覧いただいております駅・沿線をご紹介いたします。</p>
+                                    <p style="font-size: 14px;mso-ansi-font-size:14px;font-weight: 500;line-height: 1.4em;background-color: white;width:80%;margin:auto;color:#000000">過去1週間で繰り返し閲覧された物件はこちらです。気になる物件はお気軽にお問い合わせください。</p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <!--[if mso | IE]></table><![endif]-->
                     <!-- END タイトルH1 -->
-
                     <!-- START 空白１-->
                     <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                    <table cellspacing="0" cellpadding="16px" border="0" width="100%" class="mktoModule" id="moduleSpace" mktoName="空白１" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#FFFEF8;">
+                    <table cellspacing="0" cellpadding="16px" border="0" width="100%" class="mktoModule" id="moduleSpace1" mktoName="空白１" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;background-color:${GlobalBackgroundColor};">
                         <tbody>
                             <tr>
                                 <td>
@@ -491,12 +511,12 @@
 
                     <!-- START タイトル画像 -->
                     <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                    <table cellspacing="0" cellpadding="16px" border="0" class="mktoModule" id="moduleImg_TItle" mktoName="タイトル画像" 　width="100%" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#FFFEF8;">
+                    <table cellspacing="0" cellpadding="16px" border="0" class="mktoModule" id="moduleImg_TItle" mktoName="タイトル画像" 　width="100%" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;background-color:${GlobalBackgroundColor};">
                         <tbody>
                             <tr>
                                 <td style="padding: 0 20px;">
-                                    <div style="width:80%;margin:auto;">
-                                        <img width="100%" alt="第一位" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/tit_img.jpg">
+                                    <div style="width:40%;margin:auto;">
+                                        <img width="100%" alt="人が考える画像" src="{%image.searching_anywhere_2202%}">
                                     </div>
                                 </td>
                             </tr>
@@ -504,10 +524,9 @@
                     </table>
                     <!--[if mso | IE]></table><![endif]-->
                     <!-- END タイトル画像 -->
-
                     <!-- START 空白１-->
                     <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                    <table cellspacing="0" cellpadding="24px" border="0" class="mktoModule" id="moduleSpace1" mktoName="空白1" width="100%" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#FFFEF8">
+                    <table cellspacing="0" cellpadding="20px" border="0" width="100%" class="mktoModule" id="moduleSpace2" mktoName="空白１" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;background-color:${GlobalBackgroundColor};">
                         <tbody>
                             <tr>
                                 <td>
@@ -517,131 +536,62 @@
                     </table>
                     <!--[if mso | IE]></table><![endif]-->
                     <!-- END 空白１ -->
-
-                    <!-- START ランキング -->
                     <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                    <table cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#FFFEF8;padding:0 11%">
+                    <table cellspacing="0" cellpadding="20px" border="0" width="100%" class="mktoModule" id="moduleRanking_spacer" mktoName="ランキング＿空白" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;background-color:#FBF8EB;">
                         <tbody>
-                            <!-- -->
-                            <!-- 1位ここから　　　　　 -->
-                            <!--  -->
-                            <tr style="max-width:600px;width:100%">
-                                <td style="padding:12px;background-color:#fbf8eb;">
-                                </td>
-                            </tr>
-                            <tr style="max-width:600px;width:100%">
-                                <td style="padding:0;">
-                                    <img width="100%" alt="第一位" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1.png">
-                                </td>
-                            </tr>
-                            <tr style="max-width:600px;width:100%">
-                                <td style="padding:0;background-color:#fbf8eb;">
-                                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                                    <table cellspacing="0" cellpadding="0" align="center" style="border-collapse: collapse;border-spacing: 0;border: 0; padding: 0;margin:0 auto ;width:80%;max-width: 480px;">
-                                        <tbody>
-                                            <tr width="100">
-                                                <td>
-                                                    <table cellspacing="0" cellpadding="12px" border="0" width="100%" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;">
-                                                        <tr>
-                                                            <td></td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr width="100">
-                                                <td>
-                                                    <img width="100%" style="margin:0 auto;display: block;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1_line_title.png" alt="沿線名">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center" style="background-color: #FFFFFF;border-left: solid 1px #fbf8eb;border-right: solid 1px #fbf8eb;">
-                                                    <p style="font-size: 16px;mso-ansi-font-size:16px;line-height: 1.4em;background-color: #FFFFFF;color:#000000;text-align: center;font-weight: 700;">京浜東北線</p>
-
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center" style="background-color: #FFFFFF;border-left: solid 1px #fbf8eb;border-right: solid 1px #fbf8eb;">
-                                                    <p style="margin-top:0;">
-                                                        <!--[if gte mso | IE]>
-                                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
-                                                          <w:anchorlock/>
-                                                          <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">図面を受け取る</center>
-                                                        </v:roundrect>
-                                                      <![endif]-->
-                                                        <!--[if !gte !mso | !IE]><!-- -->
-                                                        <a class="main_cta_min" href=" https://litmus.com" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
-                                                        <!--<![endif]-->
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr width="100">
-                                                <td>
-                                                    <img width="100%" style="margin:0 auto;display: block;" src="https://334-SCB-946.mktoweb.com/rs/334-SCB-946/images/1_station_title.png" alt="駅名">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center" style="background-color: #FFFFFF;border-left: solid 1px #fbf8eb;border-right: solid 1px #fbf8eb;">
-                                                    <p style="font-size: 16px;mso-ansi-font-size:16px;line-height: 1.4em;background-color: #FFFFFF;color:#000000;text-align: center;font-weight: 700;">京浜東北線</p>
-
-                                                </td>
-                                            </tr>
-
-                                            <!-- ボタンをテキストにする場合 -->
-                                            <tr>
-                                                <td align="center" style="background-color: #FFFFFF;border-left: solid 1px #fbf8eb;border-right: solid 1px #fbf8eb;border-bottom: solid 1px #fbf8eb;">
-                                                    <p style="margin-top:0;">
-                                                        <!--[if gte mso | IE]>
-                                                        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:50px;v-text-anchor:middle;width:300px;" arcsize="10%" strokecolor="#DA1A1D" fillcolor="#DA1A1D">
-                                                          <w:anchorlock/>
-                                                          <center style="color:#ffffff;font-family:sans-serif;font-size:13px;font-weight:bold;">図面を受け取る</center>
-                                                        </v:roundrect>
-                                                      <![endif]-->
-                                                        <!--[if !gte !mso | !IE]><!-- -->
-                                                        <a class="main_cta_min" href=" https://litmus.com" target="_blank" style="background-color: #DA1A1D;font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;font-weight: bold;width:50%; text-decoration: none;border-radius: 5px; padding: 12px 0; border: 1px solid #DA1A1D; display: inline-block;box-shadow: 1px 1px 4px #00000016;">物件を見る ＞</a>
-                                                        <!--<![endif]-->
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr width="100">
+                            <tr>
                                 <td>
-                                    <table cellspacing="0" cellpadding="12px" border="0" width="100%" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;">
-                                        <tr>
-                                            <td></td>
-                                        </tr>
-                                    </table>
                                 </td>
                             </tr>
-                            <!-- -->
-                            <!-- 1位ここまで　　　　　 -->
-                            <!-- -->
-
-
                         </tbody>
                     </table>
                     <!--[if mso | IE]></table><![endif]-->
-                    <!-- END ランキング -->
-
+                    <!-- START ランキング物件 -->
+                    <table class="mktoModule" cellpadding="0" cellspacing="0" bgcolor="${spacerBackgroundColor}" border="0" align="center" id="mytoken" width="100%" mktoname="Mytokenhere" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0; border-collapse: collapse;max-width:${GlobalWidth};margin:0 auto;background-color:#FFFEF8;">
+                        <tbody>
+                            <tr>
+                                <td style="-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;word-break: break-word;-webkit-hyphens: none;-moz-hyphens: none;hyphens: none;border-collapse: collapse;">
+                                    <div class="mktoText" id="token" mktoname="Preheader Text" style="padding:0;">
+                                        {{my.browsing_propaty_bukkens}}
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- END ランキング物件 -->
                 </td>
             </tr>
         </tbody>
     </table>
     <!--[if mso | IE]></table><![endif]-->
     <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-    <table cellpadding=" 0" cellspacing="0" border="0" id="backgroundTable" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600px;margin:0 auto;background-color:#FFFEF8">
+    <table cellpadding="0" cellspacing="0" border="0" align="center" 　id="backgroundTable" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:white;margin:0 auto;padding:0;width:100% !important;line-height:100% !important;max-width:${GlobalWidth};margin: auto;;font-family: 'NotoSansCJKjp', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, sans-serif;">
         <tbody>
             <tr>
                 <td>
-                    <div class="mktoSnippet" id="textFooterSentence" mktoname="※万が一、本メールに・・・" mktoDefaultSnippetId="3" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600pxpx;margin:0 auto;background-color:#ffffff;">
+                    <div class="mktoSnippet" id="snipetsearch_kodawari" mktoname="こだわり条件で検索" mktoDefaultSnippetId="{%snippet.search_by_specific_requirements %}" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth}px;margin:0 auto;background-color:${GlobalBackgroundColor};">
                     </div>
-                    <div class="mktoSnippet" id="snipetFooterLogo" mktoname="フッターのロゴ" mktoDefaultSnippetId="2" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600pxpx;margin:0 auto;background-color:#ffffff;">
+                    <div class="mktoSnippet" id="snipetsearch_contents" mktoname="おすすめのコンテンツ" mktoDefaultSnippetId="{%snippet.recommend_contents%}" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth}px;margin:0 auto;background-color:${GlobalBackgroundColor};">
                     </div>
-                    <div class="mktoSnippet" id="snipetSNSlinks" mktoname="SNSのリンク" mktoDefaultSnippetId="4" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600pxpx;margin:0 auto;background-color:#ffffff;">
+                    <div class="mktoSnippet" id="snipetsearch_consult" mktoname="まずは気軽に相談" mktoDefaultSnippetId="{%snippet.consultation_meeting%}" cellpadding="0" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth}px;margin:0 auto;background-color:${GlobalBackgroundColor};">
                     </div>
-                    <div class="mktoSnippet" id="snipetFotterLinks" mktoname="個人情報保護方針など" mktoDefaultSnippetId="5" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600pxpx;margin:0 auto;background-color:#ffffff;">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--[if mso | IE]></table><![endif]-->
+    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
+    <table cellpadding=" 0" cellspacing="0" border="0" id="backgroundTable" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:${GlobalWidth};margin:0 auto;background-color:${GlobalBackgroundColor}">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="mktoSnippet" id="textFooterSentence" mktoname="※万が一、本メールに・・・" mktoDefaultSnippetId="{%snippet.precautionary_statement%}" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600pxpx;margin:0 auto;background-color:#ffffff;">
+                    </div>
+                    <div class="mktoSnippet" id="snipetFooterLogo" mktoname="フッターのロゴ" mktoDefaultSnippetId="{%snippet.footer_logo%}" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600pxpx;margin:0 auto;background-color:#ffffff;">
+                    </div>
+                    <div class="mktoSnippet" id="snipetSNSlinks" mktoname="SNSのリンク" mktoDefaultSnippetId="{%snippet.link_to_sns%}" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600pxpx;margin:0 auto;background-color:#ffffff;">
+                    </div>
+                    <div class="mktoSnippet" id="snipetFotterLinks" mktoname="個人情報保護方針など" mktoDefaultSnippetId="{%snippet.footer_link%}" cellpadding="10" cellspacing="0" border="0" align="center" style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;max-width:600pxpx;margin:0 auto;background-color:#ffffff;">
                     </div>
                 </td>
             </tr>

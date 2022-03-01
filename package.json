@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prod": "npx gulp --env prod",
+    "dev": "npx gulp --env dev",
+    "local": "npx gulp --env local_dev"
   },
   "repository": {
     "type": "git",
@@ -26,12 +28,9 @@
   "dependencies": {
     "gmail-send": "^1.8.14",
     "gulp-map": "0.0.2",
+    "gulp-token-replace": "^1.1.3",
     "map-stream": "0.0.7",
     "minimist": "^1.2.5",
     "nodemailer": "^6.7.2"
-  },
-  "scripts": {
-    "prod"     : "npx gulp --env prod",
-    "dev": "npx gulp --env develop"
   }
 }
